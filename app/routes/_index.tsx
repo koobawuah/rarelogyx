@@ -16,7 +16,7 @@ export default function Index() {
             <div className="w-full relative p-6 pb-10 flex flex-col">
               <PrimaryChips text="Building full-scale systems" />
               <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-8">
-                <h1 className="max-w-2xl my-0 text-4xl lg:text-6xl text-primary text-balance col-span-3">
+                <h1 className="max-w-2xl my-0 text-4xl lg:text-6xl text-primary tracking-tighter text-balance col-span-3">
                   Digital solutions, Engineered for Growth.
                 </h1>
                 <div className="flex flex-col gap-y-6">
