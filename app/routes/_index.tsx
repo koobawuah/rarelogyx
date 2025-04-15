@@ -102,7 +102,7 @@ export function BigButton({
           {name}
         </p>
       </div>
-      <p className="text-sm font-normal max-w-52">{description}</p>
+      <p className="text-sm text-white font-normal max-w-52">{description}</p>
     </Link>
   );
 }
