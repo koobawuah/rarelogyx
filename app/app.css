@@ -5,6 +5,17 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-primary: #122c5f;
   --color-bg-primary: #071839;
+
+  --animate-pulse-2x: pulse 1.9s ease-in infinite;
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
 }
 
 html,
