@@ -19,7 +19,7 @@ export default function Index() {
             {/* Hero content  */}
             <div className="w-full relative overflow-hidden p-6 pb-10 pt-30 lg:pt-6 flex flex-col justify-end items-start gap-4 z-10 grow">
               <PrimaryChips text="Building full-scale systems" />
-              <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8">
+              <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-8">
                 <h1 className="max-w-2xl my-0 text-4xl lg:text-6xl font-normal text-primary tracking-tighter text-balance col-span-3">
                   Digital solutions, Engineered for Growth.
                 </h1>
