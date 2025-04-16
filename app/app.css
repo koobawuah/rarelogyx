@@ -16,6 +16,29 @@
       opacity: 1;
     }
   }
+
+  --animate-flip: flip 0.25s ease-in;
+  @keyframes flip {
+    0% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+    40% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+  }
+  --animate-flip-out: flip-out 0.25s ease-in;
+  @keyframes flip-out {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    40% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
 }
 
 html,
