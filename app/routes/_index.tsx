@@ -73,7 +73,7 @@ export default function Index() {
               muted
               autoPlay
               loop
-              className="w-full h-[560px] lg:size-full block relative border border-white/20 rounded-lg "
+              className="w-full h-[560px] lg:h-full block relative border border-white/20 rounded-lg object-cover"
             />
             <div className="flex flex-col justify-start items-stretch gap-1 grow">
               <img
