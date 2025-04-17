@@ -21,11 +21,11 @@ export default function Index() {
               <div className="size-auto relative overflow-hidden p-6 pb-10 pt-30 lg:pt-6 flex flex-col justify-end items-start gap-4 z-10 grow object-fill">
                 <PrimaryChips text="Building full-scale systems" />
                 <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-8">
-                  <h1 className="max-w-2xl my-0 text-4xl lg:text-6xl font-normal text-primary tracking-tighter text-balance col-span-3">
+                  <h1 className="max-w-2xl my-0 text-4xl lg:text-[64px] font-normal text-primary tracking-[-0.015em] lg:tracking-[-0.033em] text-balance col-span-3">
                     Digital solutions, Engineered for Growth.
                   </h1>
                   <div className="py-1 flex flex-col justify-between items-stretch lg:items-start gap-6">
-                    <p className="max-w-96 lg:max-w-[280px] text-primary text-sm">
+                    <p className="max-w-96 lg:max-w-[280px] text-primary text-sm leading-4">
                       We deliver intelligent software solutions, from apps to
                       branding, to turning your ideas into fully functional
                       systems.
@@ -65,8 +65,8 @@ export default function Index() {
       </div>
       {/* setion  */}
       <section className="size-auto lg:h-screen lg:min-h-[720px] flex flex-col justify-start items-stretch pb-1">
-        <div className="w-full max-w-[1928px] h-auto mx-auto px-1 flex flex-col justify-start items-stretch grow">
-          <div className="size-auto flex flex-col justify-start items-stretch lg:grid lg:grid-cols-2 gap-1 grow">
+        <div className="w-full max-w-[1928px] h-auto lg:h-full mx-auto px-1 flex flex-col justify-start items-stretch grow">
+          <div className="size-auto flex flex-col justify-start items-stretch lg:h-full lg:grid lg:grid-cols-2 gap-1 grow">
             <video
               // src="images/intro-vid.mp4"
               src="https://videos.pexels.com/video-files/8124286/8124286-hd_1080_1920_30fps.mp4"
