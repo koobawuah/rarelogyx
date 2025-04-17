@@ -15,7 +15,7 @@ export default function BigButton({
     <Link
       to={to}
       className={
-        "w-auto group h-auto bg-primary hover:opacity-85 flex flex-col justify-start items-stretch gap-x-1.5 py-7 px-6 grow rounded-lg select-none gap-12 transition-all duration-300"
+        "w-auto group h-auto bg-primary hover:opacity-85 flex flex-col justify-start items-stretch gap-x-1.5 py-7 px-6 grow rounded-lg select-none gap-12 transition-all duration-300 shrink"
       }
       style={{ backgroundColor: bgColor }}
     >
