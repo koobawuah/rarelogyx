@@ -71,10 +71,9 @@ export default function Index() {
               // src="images/intro-vid.mp4"
               src="https://videos.pexels.com/video-files/8124286/8124286-hd_1080_1920_30fps.mp4"
               muted
-              playsInline
               autoPlay
               loop
-              className="w-full h-[560px] lg:size-full border border-white/20 rounded-lg overflow-hidden object-cover box-border"
+              className="w-full h-[560px] lg:size-full block relative border border-white/20 rounded-lg "
             />
             <div className="flex flex-col justify-start items-stretch gap-1 grow">
               <img
