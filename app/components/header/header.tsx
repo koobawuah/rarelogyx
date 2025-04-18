@@ -27,8 +27,8 @@ export default function Header() {
       <div
         data-open={isOpen}
         className={cn(
-          "w-auto m-1 px-6 pt-20 bg-[#f2f2f2] overflow-hidden rounded-lg absolute transition-all duration-500 ease-in-out inset-0 z-20 lg:rounded-none lg:relative lg:-translate-0 lg:size-auto lg:px-0 lg:pt-0 lg:mx-0 lg:col-span-3 lg:grid lg:grid-cols-3 gap-2 shrink",
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 "
+          "w-auto m-1 px-6 pt-20 bg-[#f2f2f2] overflow-hidden rounded-lg absolute top-0 left-0 transition-all duration-500 ease-in-out z-20 lg:rounded-none lg:opacity-100 lg:relative lg:translate-y-0 lg:size-auto lg:px-0 lg:pt-0 lg:mx-0 lg:col-span-3 lg:grid lg:grid-cols-3 gap-2 shrink",
+          isOpen ? "max-h-dvh opacity-100" : "max-h-0 opacity-0 lg:max-h-max"
         )}
       >
         {/* Nav content */}
