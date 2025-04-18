@@ -13,7 +13,7 @@ export default function Index() {
           {/* Hero */}
           <div className="flex flex-col gap-1 justify-start items-stretch grow">
             {/* Hero Content Wrapper */}
-            <header className="size-auto bg-[#f2f2f2] rounded-lg flex flex-col justify-start items-stretch grow">
+            <header className="size-auto bg-[#f2f2f2] overflow-hidden rounded-lg flex flex-col justify-start items-stretch grow">
               {/* Nav */}
               <Header />
 
