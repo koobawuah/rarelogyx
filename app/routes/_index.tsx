@@ -1,8 +1,14 @@
+import type { ClassValue } from "clsx";
+import type { ReactNode } from "react";
+import { Link } from "react-router";
 import BigButton from "~/components/big-button";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
+import LogoBlock from "~/components/logo-block";
 import PrimaryButton from "~/components/primary-button";
 import PrimaryChips from "~/components/primary-chips";
+import { SectionBlock } from "~/components/section-block";
+import { cn } from "~/libs/utils";
 
 export default function Index() {
   return (
@@ -73,7 +79,7 @@ export default function Index() {
               muted
               autoPlay
               loop
-              className="w-full h-[560px] lg:h-full block relative border border-white/20 rounded-lg object-cover"
+              className="w-full h-[560px] min-h-0 lg:h-full block relative border border-white/20 rounded-lg object-cover"
             />
             <div className="flex flex-col justify-start items-stretch gap-1 grow">
               <img
@@ -95,6 +101,28 @@ export default function Index() {
           </div>
         </div>
       </section>
+      {/* social proof */}
+      <SectionBlock>
+        <div className="w-full h-auto max-w-[960px] flex flex-col justify-start items-center">
+          <PrimaryChips text="Featured Clients" variant="white" />
+          <div className="w-full my-12 grid grid-cols-2 gap-[1px] lg:grid-cols-3 bg-white/10 rounded-lg overflow-hidden">
+            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67fcaac5ad82dcc3c1cfc9b4_monologo-white.png" />
+            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8e15f126ef81791c77245_versace-gold-logo-p-2000.png" />
+            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8bd68630dd52ec429cd48_cf73420e2c4cdf05e92b8cfd2643753b_BC%20Logo%20Complete%20-%20Horizontal.png" />
+            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8df4dbdfec39fa02a350b_amba-gallery-horizontal-final-p-2000.png" />
+            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67fcab5e19a050ba65654ce0_servinn-logo%5Bsec-transparent%5D-02-p-2000.png" />
+            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8e79057c69984d2e77262_bafla-logo.jpg" />
+          </div>
+          <p className="max-w-80 text-sm font-normal text-center text-white/70">
+            We&apos;re honoured to have collaborated with visionary clients who
+            challenge us to innovate and excel.
+          </p>
+        </div>
+      </SectionBlock>
+
+      <SectionBlock containerContent="max-w-[1192px]">
+        <PrimaryChips variant="white" text="Our Projects" />
+      </SectionBlock>
     </>
   );
 }
