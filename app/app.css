@@ -6,18 +6,21 @@
   --color-primary: #122c5f;
   --color-bg-primary: #071839;
 
-  --animate-pulse-2x: pulse 1.9s ease-in infinite;
+  --animate-pulse-2x: pulse 1.8s ease-in infinite;
   @keyframes pulse {
     0%,
     100% {
       opacity: 0;
     }
-    50% {
+    30% {
+      opacity: 1;
+    }
+    90% {
       opacity: 1;
     }
   }
 
-  --animate-flip: flip 0.25s ease-in;
+  --animate-flip: flip 2.5s ease-in;
   @keyframes flip {
     0% {
       transform: rotateX(0deg);
@@ -28,7 +31,7 @@
       opacity: 0;
     }
   }
-  --animate-flip-out: flip-out 0.25s ease-in;
+  --animate-flip-out: flip-out 2.5s ease-in;
   @keyframes flip-out {
     0% {
       transform: rotateX(90deg);

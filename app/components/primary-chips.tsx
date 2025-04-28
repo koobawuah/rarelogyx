@@ -3,9 +3,11 @@ import { cn } from "~/libs/utils";
 export default function PrimaryChips({
   text,
   variant,
+  animate = true,
 }: {
   text: string;
   variant?: "default" | "white";
+  animate?: boolean;
 }) {
   return (
     <div
@@ -16,8 +18,9 @@ export default function PrimaryChips({
     >
       <span
         className={cn(
-          "size-1 bg-primary rounded-full animate-pulse-2x",
-          variant === "white" ? "bg-white" : ""
+          "size-[3px] bg-primary rounded-full",
+          variant === "white" ? "bg-white" : "",
+          animate ? "animate-pulse-2x" : ""
         )}
       />
       <p

@@ -7,8 +7,10 @@ import Header from "~/components/header/header";
 import LogoBlock from "~/components/logo-block";
 import PrimaryButton from "~/components/primary-button";
 import PrimaryChips from "~/components/primary-chips";
-import { SectionBlock } from "~/components/section-block";
+import ProjectItem from "~/components/project-item";
+import SectionBlock from "~/components/section-block";
 import { cn } from "~/libs/utils";
+import { siteConfig } from "~/site.config";
 
 export default function Index() {
   return (
@@ -121,8 +123,43 @@ export default function Index() {
       </SectionBlock>
 
       <SectionBlock containerContent="max-w-[1192px]">
-        <PrimaryChips variant="white" text="Our Projects" />
+        <div className="w-full h-auto mb-16 flex flex-col justify-start items-center gap-6 lg:mb-20">
+          <div className="w-full max-w-[440px] h-auto flex flex-col justify-start items-center gap-4">
+            <PrimaryChips variant="white" text="Our Projects" />
+            <h2 className="text-3xl tracking-[-1.76px] text-center text-white text-clip lg:text-[44px]">
+              See Our Newest
+              <br /> Projects in Action
+            </h2>
+          </div>
+          <PrimaryButton to="/projects" text="View All" variant="white" />
+        </div>
+        <div className="w-full h-auto">
+          <div className="size-auto flex flex-col justify-start items-stretch gap-1">
+            {siteConfig.projects.length > 0 ? (
+              siteConfig.projects.map((p, id) => (
+                <ProjectItem
+                  key={p.title}
+                  title={p.title}
+                  description={p.description}
+                  location={p.location}
+                  typeOfWork={p.typeOfWork}
+                  completionDate={p.completionDate}
+                  tags={p.tags}
+                  projectImage={p.projectImage}
+                  reverse={id % 2 !== 0}
+                />
+              ))
+            ) : (
+              <div className="size-auto block py-7 px-6 border border-white/10 bg-white/3">
+                <p className="text-white text-base text-center font-medium uppercase">
+                  No Projects.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
       </SectionBlock>
+      <SectionBlock className="py-52"></SectionBlock>
     </>
   );
 }

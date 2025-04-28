@@ -2,7 +2,7 @@ import type { ClassValue } from "clsx";
 import type { ReactNode } from "react";
 import { cn } from "~/libs/utils";
 
-export function SectionBlock({
+export default function SectionBlock({
   className,
   defaultContainer,
   containerContent,
