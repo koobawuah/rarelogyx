@@ -79,10 +79,11 @@ export default function Index() {
             <video
               // src="images/intro-vid.mp4"
               src="https://videos.pexels.com/video-files/8124286/8124286-hd_1080_1920_30fps.mp4"
-              muted
               autoPlay
-              disablePictureInPicture
+              muted
               loop
+              playsInline
+              disablePictureInPicture
               controls={false}
               className="w-full h-[560px] min-h-0 lg:h-full block relative border border-white/20 rounded-lg object-cover select-none"
             />
