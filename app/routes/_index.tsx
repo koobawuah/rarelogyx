@@ -194,10 +194,34 @@ export default function Index() {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
 
-
-export 
+export function Footer() {
+  return (
+    <div className="pb-1">
+      <div className="w-full mx-auto px-1 lg:max-w-482">
+        <div className="px-6 pt-8 pb-5 bg-white text-primary rounded-lg flex flex-col justify-start items-stretch gap-6 lg:gap-0 relative">
+          <div className="size-auto flex flex-col-reverse justify-start items-stretch gap-40 lg:grid lg:grid-cols-4 lg:gap-2">
+            <div className=""></div>
+            <div className="size-auto flex flex-col justify-start items-stretch gap-8 lg:col-span-3 lg:grid lg:grid-cols-3 lg:gap-2 ">
+              <div className="size-auto flex flex-col justify-start items-stretch gap-4">
+                <p className="">MENU</p>
+                <div className="size-auto flex flex-col justify-start items-start gap-1.5">
+                  <span>About</span>
+                  <span>Projects</span>
+                  <span>Services</span>
+                  <span>Contact Us</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="" alt="" className="" />
+          <GridLines />
+        </div>
+      </div>
+    </div>
+  );
+}
