@@ -1,10 +1,11 @@
 import type { ClassValue } from "clsx";
-import type { ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 import { Link } from "react-router";
 import BigButton from "~/components/big-button";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
 import LogoBlock from "~/components/logo-block";
+import NavCard from "~/components/nav-card";
 import PrimaryButton from "~/components/primary-button";
 import PrimaryChips from "~/components/primary-chips";
 import ProjectItem from "~/components/project-item";
@@ -162,6 +163,41 @@ export default function Index() {
         </div>
       </SectionBlock>
       <SectionBlock className="py-52"></SectionBlock>
+      <div className="size-auto min-h-auto lg:h-screen lg:min-h-180 pb-1 flex flex-col justify-start items-stretch">
+        <div className="w-full max-w-none lg:max-w-482 mx-auto px-1 flex flex-col justify-start items-stretch grow">
+          <div className="size-auto flex flex-col justify-start items-stretch gap-1 grow lg:grid lg:grid-cols-2">
+            <NavCard
+              chipTitle="Our Services"
+              title={
+                <span>
+                  Your Vision,
+                  <br /> Our Expertise
+                </span>
+              }
+              cta="Discover Our Services"
+              link="/services"
+              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f868ebad56d883013fc924_uk-black-tech-YDEiseFR_Q8-unsplash.jpg"
+            />
+            <NavCard
+              chipTitle="Contact Us"
+              title={
+                <span>
+                  Let&apos;s Start the
+                  <br /> Conversation
+                </span>
+              }
+              cta="Get In Touch"
+              link="/services"
+              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f86989473eada6fb902a57_20fa007f0fd356ab36364e17fa68e029_the-jopwell-collection-kmBE0ircrQ0-unsplash.jpg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </>
   );
 }
+
+
+export 
