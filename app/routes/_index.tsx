@@ -74,14 +74,15 @@ export default function Index() {
       {/* setion  */}
       <section className="size-auto lg:h-screen lg:min-h-[720px] flex flex-col justify-start items-stretch pb-1">
         <div className="w-full max-w-[1928px] h-auto lg:h-full mx-auto px-1 flex flex-col justify-start items-stretch grow">
-          <div className="size-auto flex flex-col justify-start items-stretch lg:h-full lg:grid lg:grid-cols-2 gap-1 grow">
+          <div className="size-auto flex flex-col justify-start items-stretch lg:h-full lg:grid lg:grid-cols-2 gap-1 grow select-none">
             <video
               // src="images/intro-vid.mp4"
               src="https://videos.pexels.com/video-files/8124286/8124286-hd_1080_1920_30fps.mp4"
+              controls={false}
               muted
               autoPlay
               loop
-              className="w-full h-[560px] min-h-0 lg:h-full block relative border border-white/20 rounded-lg object-cover"
+              className="w-full h-[560px] min-h-0 lg:h-full block relative border border-white/20 rounded-lg object-cover select-none"
             />
             <div className="flex flex-col justify-start items-stretch gap-1 grow">
               <img
