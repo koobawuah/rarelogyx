@@ -58,7 +58,7 @@ export default function Footer() {
                 heading="Address"
                 links={[
                   {
-                    to: "/about",
+                    to: "https://map.google.com/maps/place/Dr+aggrey+street",
                     label: (
                       <span>
                         GK1 Asofan Ave,
