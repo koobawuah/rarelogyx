@@ -77,7 +77,10 @@ export default function ProjectItem({
           </div>
         </div>
         <div className="size-auto flex flex-row justify-start items-center gap-3">
-          <PrimaryButton text="Learn More" />
+          <PrimaryButton
+            text="Learn More"
+            to={`/projects/${title.toLowerCase().replaceAll(" ", "-")}`}
+          />
           {location && (
             <PrimaryButton text="View On Maps" variant="transparent" />
           )}

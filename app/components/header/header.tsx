@@ -41,7 +41,7 @@ export default function Header() {
             </ul>
             <ul className="flex flex-col justify-start items-start gap-3">
               <MenuItem to="/services" text="Services" />
-              <MenuItem to="/contact" text="Contact Us" />
+              <MenuItem to="/contact-us" text="Contact Us" />
             </ul>
           </div>
           <div>

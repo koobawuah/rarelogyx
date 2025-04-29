@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import PrimaryChips from "./primary-chips";
 import PrimaryButton from "./primary-button";
+import HeadingH2 from "./heading-h2";
 
 export default function NavCard({
   chipTitle,
@@ -20,9 +21,7 @@ export default function NavCard({
       <div className="w-full h-auto flex flex-col justify-start items-center gap-6 relative z-10">
         <div className="w-full max-w-70 flex flex-col justify-start items-center gap-4 lg:max-w-110">
           <PrimaryChips text={chipTitle} variant="blur" />
-          <h2 className="text-3xl tracking-[-1.76px] leading-11 text-center text-white text-clip lg:text-[44px]">
-            {title}
-          </h2>
+          <HeadingH2>{title}</HeadingH2>
         </div>
         <PrimaryButton to={link} text={cta} variant="white" />
       </div>

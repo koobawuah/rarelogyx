@@ -2,6 +2,7 @@ import BigButton from "~/components/big-button";
 import Footer from "~/components/footer/footer";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
+import HeadingH2 from "~/components/heading-h2";
 import LogoBlock from "~/components/logo-block";
 import NavCard from "~/components/nav-card";
 import PrimaryButton from "~/components/primary-button";
@@ -26,7 +27,7 @@ export default function Index() {
               {/* Hero content  */}
               <div className="size-auto relative overflow-hidden p-6 pb-10 pt-30 lg:pt-6 flex flex-col justify-end items-start gap-4 z-10 grow object-fill">
                 <PrimaryChips text="Building full-scale systems" />
-                <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-8">
+                <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-2">
                   <h1 className="max-w-2xl my-0 text-4xl lg:text-[64px] font-normal text-primary tracking-[-0.04em] lg:tracking-[-0.04em] text-balance col-span-3">
                     Digital solutions, Engineered for Growth.
                   </h1>
@@ -128,10 +129,10 @@ export default function Index() {
         <div className="w-full h-auto mb-16 flex flex-col justify-start items-center gap-6 lg:mb-20">
           <div className="w-full max-w-[440px] h-auto flex flex-col justify-start items-center gap-4">
             <PrimaryChips variant="white" text="Our Projects" />
-            <h2 className="text-3xl tracking-[-1.76px] text-center text-white text-clip lg:text-[44px]">
+            <HeadingH2>
               See Our Newest
               <br /> Projects in Action
-            </h2>
+            </HeadingH2>
           </div>
           <PrimaryButton to="/projects" text="View All" variant="white" />
         </div>
