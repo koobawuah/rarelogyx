@@ -6,7 +6,7 @@ import { cn } from "~/libs/utils";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="size-auto flex flex-col justify-start items-stretch lg:border-b lg:border-black/10 lg:p-6 lg:grid lg:grid-cols-4 lg:gap-8">
+    <nav className="size-auto flex flex-col justify-start items-stretch lg:border-b lg:border-black/10 lg:p-6 lg:grid lg:grid-cols-4 lg:gap-2">
       {/* Menu and logo button */}
       <div className="bg-[#f2f2f2] flex flex-row justify-between items-center p-6 gap-6 border-b border-black/10 lg:border-b-0 lg:p-0 relative z-30">
         <Link to="/">
@@ -32,9 +32,9 @@ export default function Header() {
         )}
       >
         {/* Nav content */}
-        <div className="flex flex-col items-stretch mt-6 gap-10 lg:mt-0 lg:col-span-3 lg:grid lg:grid-cols-3 lg:gap-8">
+        <div className="flex flex-col items-stretch mt-6 gap-10 lg:mt-0 lg:col-span-3 lg:grid lg:grid-cols-3 lg:gap-2">
           {/* Menu items wrapper */}
-          <div className="flex flex-col justify-start items-stretch gap-3 lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-8">
+          <div className="flex flex-col justify-start items-stretch gap-3 lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-2">
             <ul className="flex flex-col justify-start items-start gap-3">
               <MenuItem to="/about" text="About" />
               <MenuItem to="/projects" text="Projects" />

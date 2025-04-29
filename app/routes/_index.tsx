@@ -1,7 +1,5 @@
-import type { ClassValue } from "clsx";
-import type { JSX, ReactNode } from "react";
-import { Link } from "react-router";
 import BigButton from "~/components/big-button";
+import Footer from "~/components/footer/footer";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
 import LogoBlock from "~/components/logo-block";
@@ -10,7 +8,6 @@ import PrimaryButton from "~/components/primary-button";
 import PrimaryChips from "~/components/primary-chips";
 import ProjectItem from "~/components/project-item";
 import SectionBlock from "~/components/section-block";
-import { cn } from "~/libs/utils";
 import { siteConfig } from "~/site.config";
 
 export default function Index() {
@@ -30,7 +27,7 @@ export default function Index() {
               <div className="size-auto relative overflow-hidden p-6 pb-10 pt-30 lg:pt-6 flex flex-col justify-end items-start gap-4 z-10 grow object-fill">
                 <PrimaryChips text="Building full-scale systems" />
                 <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-8">
-                  <h1 className="max-w-2xl my-0 text-4xl lg:text-[64px] font-normal text-primary tracking-[-0.015em] lg:tracking-[-0.033em] text-balance col-span-3">
+                  <h1 className="max-w-2xl my-0 text-4xl lg:text-[64px] font-normal text-primary tracking-[-0.015em] lg:-tracking-tighter text-balance col-span-3">
                     Digital solutions, Engineered for Growth.
                   </h1>
                   <div className="py-1 flex flex-col justify-between items-stretch lg:items-start gap-6">
@@ -107,6 +104,7 @@ export default function Index() {
           </div>
         </div>
       </section>
+
       {/* social proof */}
       <SectionBlock>
         <div className="w-full h-auto max-w-[960px] flex flex-col justify-start items-center">
@@ -163,7 +161,11 @@ export default function Index() {
           </div>
         </div>
       </SectionBlock>
+
+      {/* Statistics Section */}
       <SectionBlock className="py-52"></SectionBlock>
+
+      {/* CTA Section */}
       <div className="size-auto min-h-auto lg:h-screen lg:min-h-180 pb-1 flex flex-col justify-start items-stretch">
         <div className="w-full max-w-none lg:max-w-482 mx-auto px-1 flex flex-col justify-start items-stretch grow">
           <div className="size-auto flex flex-col justify-start items-stretch gap-1 grow lg:grid lg:grid-cols-2">
@@ -195,34 +197,7 @@ export default function Index() {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
-  );
-}
-
-export function Footer() {
-  return (
-    <div className="pb-1">
-      <div className="w-full mx-auto px-1 lg:max-w-482">
-        <div className="px-6 pt-8 pb-5 bg-white text-primary rounded-lg flex flex-col justify-start items-stretch gap-6 lg:gap-0 relative">
-          <div className="size-auto flex flex-col-reverse justify-start items-stretch gap-40 lg:grid lg:grid-cols-4 lg:gap-2">
-            <div className=""></div>
-            <div className="size-auto flex flex-col justify-start items-stretch gap-8 lg:col-span-3 lg:grid lg:grid-cols-3 lg:gap-2 ">
-              <div className="size-auto flex flex-col justify-start items-stretch gap-4">
-                <p className="">MENU</p>
-                <div className="size-auto flex flex-col justify-start items-start gap-1.5">
-                  <span>About</span>
-                  <span>Projects</span>
-                  <span>Services</span>
-                  <span>Contact Us</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <img src="" alt="" className="" />
-          <GridLines />
-        </div>
-      </div>
-    </div>
   );
 }
