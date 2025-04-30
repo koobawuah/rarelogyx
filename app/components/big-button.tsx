@@ -50,11 +50,15 @@ export default function BigButton({
           </p>
         </div>
         {variation === "withIcon" ? (
-          <p className="text-sm text-white font-normal">{description}</p>
+          <p className="text-sm leading-4 text-white/70 font-normal">
+            {description}
+          </p>
         ) : null}
       </div>
       {variation === "default" ? (
-        <p className="text-sm text-white font-normal max-w-52">{description}</p>
+        <p className="text-sm leading-4 text-[#f2f2f2] font-normal max-w-52">
+          {description}
+        </p>
       ) : null}
     </Link>
   );
