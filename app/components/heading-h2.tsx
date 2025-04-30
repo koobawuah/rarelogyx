@@ -1,6 +1,20 @@
-export default function HeadingH2({ children }: { children: React.ReactNode }) {
+import type { ClassValue } from "clsx";
+import { cn } from "~/libs/utils";
+
+export default function HeadingH2({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: ClassValue | string;
+}) {
   return (
-    <h2 className="text-3xl leading-[46px] tracking-[-1.76px] text-center text-white text-clip lg:text-[44px]">
+    <h2
+      className={cn(
+        "text-3xl leading-[46px] tracking-[-1.76px] text-center text-white text-clip lg:text-[44px]",
+        className
+      )}
+    >
       {children}
     </h2>
   );

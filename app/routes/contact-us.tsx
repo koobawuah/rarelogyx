@@ -2,6 +2,7 @@ import BigButton from "~/components/big-button";
 import Footer from "~/components/footer/footer";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
+import HeadingH2 from "~/components/heading-h2";
 import PrimaryButton from "~/components/primary-button";
 import PrimaryChips from "~/components/primary-chips";
 
@@ -40,24 +41,67 @@ export default function ContactUs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-1">
               <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-start gap-1 shrink">
                 <BigButton
+                  icon={
+                    <img
+                      src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23ad_Mail.svg"
+                      alt="Mail Rarelogyx Icon"
+                      className="size-6 max-w-full"
+                    />
+                  }
                   name="Email Us"
                   description="Share your questions and ideas, and we'll respond quickly."
                   to={"mailto:contact@rarelogyx.com"}
+                  variation="withIcon"
                   bgColor="#122c5f"
                 />
                 <BigButton
+                  icon={
+                    <img
+                      src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23ab_Phone.svg"
+                      alt="Mail Rarelogyx Icon"
+                      className="size-6 max-w-full"
+                    />
+                  }
                   name="Call Us"
                   description="Contact us directly for immediate assistance."
                   to={"tel:+233209497199"}
+                  variation="withIcon"
                   bgColor="#254583"
                 />
               </div>
               <BigButton
+                icon={
+                  <img
+                    src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23ac_Building.svg"
+                    alt="Mail Rarelogyx Icon"
+                    className="size-6 max-w-full"
+                  />
+                }
                 name="Visit Us"
-                to={"https://www.google.com/maps/place/dr+aggrey+street"}
                 description="Visit us for personalized consultations and advice."
+                to={"https://www.google.com/maps/place/dr+aggrey+street"}
+                variation="withIcon"
                 bgColor="rgba(242,242, 242,0.5)"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="size-auto pb-1 flex flex-col justify-start items-stretch">
+        <div className="w-full max-w-none lg:max-w-482 mx-auto px-1 flex flex-col justify-start items-stretch grow">
+          <div className="size-auto flex flex-col justify-start items-stretch gap-1 grow lg:grid lg:grid-cols-2">
+            <div className="w-full overflow-hidden col-span-1 relative rounded-lg border border-white/20">
+              <img
+                src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f9708b8f8a5c8a050c0529_joyce-busola-L9U5UUScnHY-unsplash.jpg"
+                alt="Contact Rarelogyx - Lady on the phone"
+                className="size-full max-w-full absolute inset-0 object-cover overflow-clip"
+              />
+            </div>
+            <div className="size-auto px-6 pt-8 pb-12 bg-[#f2f2f2] rounded-lg flex flex-col justify-start items-stretch gap-8 cols-span-1">
+              <HeadingH2 className="text-primary max-w-80 text-left">
+                We would love to hear from you
+              </HeadingH2>
             </div>
           </div>
         </div>

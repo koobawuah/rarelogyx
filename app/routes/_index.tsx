@@ -50,20 +50,23 @@ export default function Index() {
                   name="Our Projects"
                   description="Explore our portfolio, where ideas become digital realities."
                   to={"/projects"}
+                  variation="default"
                   bgColor="#122c5f"
                 />
                 <BigButton
                   name="Our Services"
                   description="Explore our services and elevate your project with us."
                   to={"/services"}
+                  variation="default"
                   bgColor="#254583"
                 />
               </div>
               <BigButton
                 name="Get in touch"
-                to={"/contact"}
                 description="Contact us to discuss your idea, to end with a powerful solution.
 "
+                to={"/contact"}
+                variation="default"
                 bgColor="rgba(242,242, 242,0.5)"
               />
             </div>
