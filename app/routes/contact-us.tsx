@@ -102,6 +102,7 @@ export default function ContactUs() {
               <HeadingH2 className="text-primary max-w-80 text-left">
                 We would love to hear from you
               </HeadingH2>
+              <form></form>
             </div>
           </div>
         </div>

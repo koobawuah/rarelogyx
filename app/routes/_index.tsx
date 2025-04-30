@@ -65,7 +65,7 @@ export default function Index() {
                 name="Get in touch"
                 description="Contact us to discuss your idea, to end with a powerful solution.
 "
-                to={"/contact"}
+                to={"/contact-us"}
                 variation="default"
                 bgColor="rgba(242,242, 242,0.5)"
               />
