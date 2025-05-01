@@ -36,14 +36,14 @@ export default function BigButton({
         <div className="flex items-center gap-2">
           <span
             className={cn(
-              "h-1.5 bg-white w-0 -translate-x-1.5 group-hover:w-1.5 group-hover:translate-x-0 transition-all ease-in-out",
-              icon ? "size-1.5 translate-x-0 opacity-100" : ""
+              "h-1.5 bg-white w-0 -translate-x-1.5 group-hover:w-1.5 group-hover:translate-x-0 transition-all ease-in-out"
+              // icon ? "size-1.5 translate-x-0 opacity-100" : ""
             )}
           />
           <p
             className={cn(
-              "text-white font-medium uppercase text-sm -translate-x-2.5 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all",
-              icon ? "translate-x-0" : ""
+              "text-white font-medium uppercase text-sm -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all"
+              // icon ? "translate-x-0" : ""
             )}
           >
             {name}

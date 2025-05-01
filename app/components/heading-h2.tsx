@@ -11,7 +11,7 @@ export default function HeadingH2({
   return (
     <h2
       className={cn(
-        "text-3xl leading-[46px] tracking-[-1.76px] text-center text-white text-clip lg:text-[44px]",
+        "text-[28px] leading-[30px] tracking-[-1.76px] text-center text-white text-clip lg:text-[44px] lg:leading-[46px]",
         className
       )}
     >

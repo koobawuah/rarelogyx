@@ -1,10 +1,14 @@
+import type { ClassValue } from "clsx";
+import { Form } from "react-router";
 import BigButton from "~/components/big-button";
 import Footer from "~/components/footer/footer";
+import { FormInput } from "~/components/form-input";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
 import HeadingH2 from "~/components/heading-h2";
 import PrimaryButton from "~/components/primary-button";
 import PrimaryChips from "~/components/primary-chips";
+import { cn } from "~/libs/utils";
 
 export default function ContactUs() {
   return (
@@ -99,10 +103,60 @@ export default function ContactUs() {
               />
             </div>
             <div className="size-auto px-6 pt-8 pb-12 bg-[#f2f2f2] rounded-lg flex flex-col justify-start items-stretch gap-8 cols-span-1">
-              <HeadingH2 className="text-primary max-w-80 text-left">
-                We would love to hear from you
+              <HeadingH2 className=" text-primary max-w-80 text-left">
+                We would love to
+                <br /> hear from you
               </HeadingH2>
-              <form></form>
+              <div className="w-full">
+                <form
+                  method="post"
+                  className="size-auto flex flex-col justify-start items-stretch gap-8"
+                >
+                  <div className="size-auto flex flex-col justify-start items-stretch gap-6">
+                    <FormInput
+                      name="fullname"
+                      label="Full Name"
+                      placeholder="Kwame O. Nkrumah"
+                    />
+                    <div className="size-auto flex flex-col lg:flex-row justify-start items-stretch gap-6 lg:gap-2">
+                      <FormInput
+                        name="email"
+                        label="Email"
+                        placeholder="nkwame.o@gmail.com"
+                      />
+                      <FormInput
+                        name="phone"
+                        label="Phone"
+                        placeholder="+233 (0)24 488 2388"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-start items-stretch gap-2">
+                      <label
+                        htmlFor="message"
+                        className="text-xs text-bg-primary/70 font-medium text-left uppercase"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="How can we help you?"
+                        className={cn(
+                          "size-auto min-h-42 py-5 px-6 bg-bg-primary/7 hover:bg-bg-primary/10 focus:bg-bg-primary/10 rounded-lg border border-bg-primary/0 text-base placeholder:text-bg-primary/50 placeholder:font-normal overflow-clip focus:border-bg-primary/7 focus:outline-none transition-all duration-250"
+                        )}
+                      ></textarea>
+                    </div>
+                  </div>
+                  <button
+                    className={cn(
+                      "size-auto min-w-0 min-h-0 rounded-full p-[18px] bg-primary border border-primary hover:bg-transparent group duration-400 shrink cursor-auto text-xs text-[#f2f2f2] hover:text-primary font-medium uppercase"
+                    )}
+                    type="submit"
+                  >
+                    Send A Message
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
