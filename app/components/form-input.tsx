@@ -1,7 +1,7 @@
 import type { ClassValue } from "clsx";
 import { cn } from "~/libs/utils";
 
-export function FormInput({
+export default function FormInput({
   name,
   label,
   placeholder,
@@ -31,7 +31,7 @@ export function FormInput({
         id={name}
         placeholder={placeholder}
         className={cn(
-          "w-auto h-14 lg:15 mb-0 py-5 px-6 block bg-bg-primary/7 hover:bg-bg-primary/10 focus:bg-bg-primary/10 rounded-lg border border-bg-primary/0 text-base placeholder:text-bg-primary/50 placeholder:font-normal overflow-clip focus:border-bg-primary/7 focus:outline-none transition-all duration-250"
+          "w-auto h-14 lg:h-15 mb-0 py-5 px-6 block text-primary bg-bg-primary/7 hover:bg-bg-primary/10 focus:bg-bg-primary/10 rounded-lg border border-bg-primary/0 text-base placeholder:text-bg-primary/50 placeholder:font-normal overflow-clip focus:border-bg-primary/7 focus:outline-none transition-all duration-250"
         )}
       />
     </div>

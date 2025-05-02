@@ -2,7 +2,8 @@ import type { ClassValue } from "clsx";
 import { Form } from "react-router";
 import BigButton from "~/components/big-button";
 import Footer from "~/components/footer/footer";
-import { FormInput } from "~/components/form-input";
+import FormInput from "~/components/form-input";
+import FormTextArea from "~/components/form-textarea";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
 import HeadingH2 from "~/components/heading-h2";
@@ -130,22 +131,46 @@ export default function ContactUs() {
                         placeholder="+233 (0)24 488 2388"
                       />
                     </div>
-                    <div className="flex flex-col justify-start items-stretch gap-2">
+                    <div
+                      className={cn(
+                        "flex flex-col justify-start items-stretch gap-2 grow"
+                      )}
+                    >
                       <label
-                        htmlFor="message"
+                        // htmlFor={}
                         className="text-xs text-bg-primary/70 font-medium text-left uppercase"
                       >
-                        Message
+                        {"Inquiry Type"}
                       </label>
-                      <textarea
-                        name="message"
-                        id="message"
-                        placeholder="How can we help you?"
+                      {/* <div className="size-auto relative after:content-[url('https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23ae_Chevron%20Down.svg')] after:content-center-safe after:absolute after:top-0 after:left-[90%] after:transform after:translate-y-1/2"> */}
+                      <select
+                        name="inquiryType"
+                        required
                         className={cn(
-                          "size-auto min-h-42 py-5 px-6 bg-bg-primary/7 hover:bg-bg-primary/10 focus:bg-bg-primary/10 rounded-lg border border-bg-primary/0 text-base placeholder:text-bg-primary/50 placeholder:font-normal overflow-clip focus:border-bg-primary/7 focus:outline-none transition-all duration-250"
+                          "w-auto h-14 lg:h-15 mb-0 px-6 block bg-bg-primary/7 hover:bg-bg-primary/10 focus:bg-bg-primary/10 rounded-lg border border-bg-primary/0 text-base text-primary overflow-clip focus:border-bg-primary/7 focus:outline-none transition-all duration-250 appearance-none shrink"
                         )}
-                      ></textarea>
+                      >
+                        <option value="general" selected>
+                          General Inquiry
+                        </option>
+                        <option value="proposal">Project Proposal</option>
+                        <option value="request">Request for Quotation</option>
+                        <option value="partnership">
+                          Partnership Opportunities
+                        </option>
+                        <option value="volunteer">Volunteering</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                      </select>
+                      {/* </div> */}
                     </div>
+
+                    <FormTextArea
+                      name="message"
+                      label="Message"
+                      placeholder="How can we help you?"
+                    />
                   </div>
                   <button
                     className={cn(
