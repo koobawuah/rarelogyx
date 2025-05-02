@@ -6,12 +6,13 @@ export default function FormInput({
   label,
   placeholder,
   className,
+  ...props
 }: {
   name?: string;
   label: string;
   placeholder?: string;
   className?: ClassValue | string;
-}) {
+} & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <div
       className={cn(
@@ -29,6 +30,7 @@ export default function FormInput({
       <input
         name={name}
         id={name}
+        {...props}
         placeholder={placeholder}
         className={cn(
           "w-auto h-14 lg:h-15 mb-0 py-5 px-6 block text-primary bg-bg-primary/7 hover:bg-bg-primary/10 focus:bg-bg-primary/10 rounded-lg border border-bg-primary/0 text-base placeholder:text-bg-primary/50 placeholder:font-normal overflow-clip focus:border-bg-primary/7 focus:outline-none transition-all duration-250"

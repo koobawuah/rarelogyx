@@ -6,12 +6,13 @@ export default function FormTextArea({
   label,
   placeholder,
   className,
+  ...props
 }: {
   name?: string;
   label: string;
   placeholder?: string;
   className?: ClassValue | string;
-}) {
+} & React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
   return (
     <div className={cn("flex flex-col justify-start items-stretch gap-2")}>
       <label
@@ -29,6 +30,7 @@ export default function FormTextArea({
         className={cn(
           "size-auto min-h-42 py-5 px-6 text-primary bg-bg-primary/7 hover:bg-bg-primary/10 focus:bg-bg-primary/10 rounded-lg border border-bg-primary/0 text-base placeholder:text-bg-primary/50 placeholder:font-normal overflow-clip focus:border-bg-primary/7 focus:outline-none transition-all duration-250"
         )}
+        {...props}
       ></textarea>
     </div>
   );
