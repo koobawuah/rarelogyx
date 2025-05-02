@@ -25,23 +25,23 @@ export async function action({ request }: Route.ActionArgs) {
 
   //Send email with resend
   try {
-    // const res = await resend.emails.send({
-    //   from: "Rarelogyx Official Website <contact@rarelogyx.com>",
-    //   to: process.env.CONTACT_EMAIL ?? "contact@rarelogyx.com",
-    //   subject: `Mail from ${fullname} - Rarelogyx Contact Us Page`,
-    //   html: `
-    //   <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; line-height: 1.5;">
-    //     <h2 style="color: #122c5f;">Mail from ${fullname} - Rarelogyx Contact Us Page</h2>
-    //     <p><strong>Full Name:</strong> ${fullname}</p>
-    //     <p><strong>Email:</strong> ${email}</p>
-    //     <p><strong>Phone:</strong> ${phone}</p>
-    //     <p><strong>Inquiry Type:</strong> ${inquiry}</p>
-    //     <p><strong>Message:</strong></p>
-    //     <p>${message}</p>
-    //   </div>
-    // `,
-    // });
-    // console.log("Email sent successfully:", res);
+    const res = await resend.emails.send({
+      from: "Rarelogyx Official Website <contact@rarelogyx.com>",
+      to: process.env.CONTACT_EMAIL ?? "contact@rarelogyx.com",
+      subject: `Mail from ${fullname} - Rarelogyx Contact Us Page`,
+      html: `
+      <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; line-height: 1.5;">
+        <h2 style="color: #122c5f;">Mail from ${fullname} - Rarelogyx Contact Us Page</h2>
+        <p><strong>Full Name:</strong> ${fullname}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Inquiry Type:</strong> ${inquiry}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      </div>
+    `,
+    });
+    console.log("Email sent successfully:", res);
     return { success: true, error: null };
   } catch (err) {
     console.error("Error sending email:", err);
