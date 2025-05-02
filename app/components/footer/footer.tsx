@@ -49,9 +49,12 @@ export default function Footer() {
               <FooterMenu
                 heading="Follow Us"
                 links={[
-                  { to: "/#", label: "LinkedIn" },
-                  { to: "/#", label: "X (Twitter)" },
-                  { to: "/#", label: "Instagram" },
+                  {
+                    to: "https://www.linkedin.com/company/rarelogyx",
+                    label: "LinkedIn",
+                  },
+                  { to: "https://x.com/#", label: "X (Twitter)" },
+                  { to: "https://instagram.com/#", label: "Instagram" },
                 ]}
               />
               <FooterMenu

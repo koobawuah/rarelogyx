@@ -194,7 +194,7 @@ export default function Index() {
                 </span>
               }
               cta="Get In Touch"
-              link="/services"
+              link="/contact-us"
               bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f86989473eada6fb902a57_20fa007f0fd356ab36364e17fa68e029_the-jopwell-collection-kmBE0ircrQ0-unsplash.jpg"
             />
           </div>
