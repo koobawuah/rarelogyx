@@ -3,6 +3,7 @@ import Footer from "~/components/footer/footer";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
 import HeadingH2 from "~/components/heading-h2";
+import { HighlightItem } from "~/components/highlight-item";
 import LogoBlock from "~/components/logo-block";
 import NavCard from "~/components/nav-card";
 import PrimaryButton from "~/components/primary-button";
@@ -167,7 +168,35 @@ export default function Index() {
       </SectionBlock>
 
       {/* Statistics Section */}
-      <SectionBlock className="py-52"></SectionBlock>
+      <SectionBlock className="py-40 lg:py-50">
+        {/* Left Heading Block Wrapper */}
+        <div className="w-full mb-16 lg:mb-20 flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-end gap-6 relative">
+          <div className="w-full max-w-70 lg:max-w-110 h-auto flex flex-col justify-start items-start gap-4">
+            <PrimaryChips text="Highlights" variant="white" />
+            <HeadingH2 className="text-left ">
+              Key Points That Define Our Success
+            </HeadingH2>
+          </div>
+          <PrimaryButton text="Get In Touch" variant="white" />
+        </div>
+        <div className="w-full h-auto pb-6 flex flex-col justify-start items-stretch gap-6 border-b border-[#f2f2f2]/10">
+          <HighlightItem
+            value="30+"
+            heading="Projects Completed"
+            description="Successfully completed over 30+ projects across startups, SMEs and public sectors, showcasing our diverse expertise."
+          />
+          <HighlightItem
+            value="7"
+            heading="Skilled Professionals"
+            description="Our team consists of 7 skilled software engineers, designers and business developers, dedicated to delivering high-quality, innovative solutions."
+          />
+          <HighlightItem
+            value="$12k"
+            heading="Projects Value"
+            description="Managed projects with a combined value of over $12k, demonstrating our capacity to handle and deliver fully functional and scalable products."
+          />
+        </div>
+      </SectionBlock>
 
       {/* CTA Section */}
       <div className="size-auto min-h-auto lg:h-screen lg:min-h-180 pb-1 flex flex-col justify-start items-stretch">
