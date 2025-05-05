@@ -177,7 +177,7 @@ export default function Index() {
               Key Points That Define Our Success
             </HeadingH2>
           </div>
-          <PrimaryButton text="Get In Touch" variant="white" />
+          <PrimaryButton to="/contact-us" text="Get In Touch" variant="white" />
         </div>
         <div className="w-full h-auto pb-6 flex flex-col justify-start items-stretch gap-6 border-b border-[#f2f2f2]/10">
           <HighlightItem

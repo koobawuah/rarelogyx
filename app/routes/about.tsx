@@ -140,7 +140,7 @@ export default function About() {
               Key Points That Define Our Success
             </HeadingH2>
           </div>
-          <PrimaryButton text="Get In Touch" variant="white" />
+          <PrimaryButton to="/contact-us" text="Get In Touch" variant="white" />
         </div>
         <div className="w-full h-auto pb-6 flex flex-col justify-start items-stretch gap-6 border-b border-[#f2f2f2]/10">
           <HighlightItem
@@ -186,7 +186,7 @@ export default function About() {
                 </span>
               }
               cta="Get In Touch"
-              link="/services"
+              link="/contact-us"
               bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f86989473eada6fb902a57_20fa007f0fd356ab36364e17fa68e029_the-jopwell-collection-kmBE0ircrQ0-unsplash.jpg"
             />
           </div>
