@@ -152,7 +152,7 @@ export default function ContactUs() {
                 We would love to
                 <br /> hear from you
               </HeadingH2>
-              <div className="w-full max-w-full">
+              <div className="w-full max-w-full lg:h-144">
                 {response?.success && response?.success === true ? (
                   <div className="size-auto mt-6 mx-auto mb-0 px-6 py-5 bg-bg-primary/7 rounded-lg flex lg:flex-row justify-center items-center gap-2">
                     <img
