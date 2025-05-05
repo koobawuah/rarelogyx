@@ -11,6 +11,8 @@ import Header from "~/components/header/header";
 import PrimaryButton from "~/components/primary-button";
 import HeadingH1 from "~/components/heading-h1";
 import BlurBlock from "~/components/blur-block";
+import { HighlightItem } from "~/components/highlight-item";
+import { TextBlock } from "~/components/text-block";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "RARELOGYX - About" }, { name: "description", content: "" }];
@@ -91,7 +93,73 @@ export default function About() {
         </div>
       </SectionBlock>
 
-      <SectionBlock className="pt-50"></SectionBlock>
+      <SectionBlock>
+        <div className="w-full h-auto mb-12 lg:mb-16 flex flex-col justify-start items-start gap-6 relative">
+          <div className="w-full max-w-70 lg:max-w-110 flex flex-col justify-start items-start gap-4">
+            <PrimaryChips text="Story & Approach" variant="white" />
+            <HeadingH2>Since 2016...</HeadingH2>
+          </div>
+        </div>
+        <div className="w-full grid grid-cols-1 gap-[1px] md:grid-cols-3 bg-white/10 rounded-lg overflow-hidden">
+          <TextBlock
+            title="We Cherished Our Beginnings"
+            description="Rarelogyx started with a vision to empower businesses through technological innovations."
+            className="md:pl-0"
+          />
+          <TextBlock
+            title="We've Seen Many Milestones"
+            description="We've grown from a small firm, serving diverse businesses and growing our portfolio at an exponential rate."
+          />
+          <TextBlock
+            title="We've Adapted"
+            description="Our history is defined by pushing our boundaries and creating products that inspire businesses to stand test of time"
+          />
+          <TextBlock
+            title="We Remained Client Centered"
+            description="We focus on understanding and reflecting our clients' visions with tailored, innovative solutions."
+            className="md:pl-0"
+          />
+          <TextBlock
+            title="We've Maintained A Standard"
+            description="We have managed to keep the focus and the zeal to always serve with creativity, intelligence and undying commitment"
+          />
+          <TextBlock
+            title="We've Enjoyed Every Moment"
+            description="Working closely with clients brings joy to our very core. We remain grateful for many years with our wonderful clients! "
+          />
+        </div>
+      </SectionBlock>
+
+      {/* Statistics Section */}
+      <SectionBlock className="py-40 lg:py-50">
+        {/* Left Heading Block Wrapper */}
+        <div className="w-full mb-16 lg:mb-20 flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-end gap-6 relative">
+          <div className="w-full max-w-70 lg:max-w-110 h-auto flex flex-col justify-start items-start gap-4">
+            <PrimaryChips text="Highlights" variant="white" />
+            <HeadingH2 className="text-left ">
+              Key Points That Define Our Success
+            </HeadingH2>
+          </div>
+          <PrimaryButton text="Get In Touch" variant="white" />
+        </div>
+        <div className="w-full h-auto pb-6 flex flex-col justify-start items-stretch gap-6 border-b border-[#f2f2f2]/10">
+          <HighlightItem
+            value="30+"
+            heading="Projects Completed"
+            description="Successfully completed over 30+ projects across startups, SMEs and public sectors, showcasing our diverse expertise."
+          />
+          <HighlightItem
+            value="7"
+            heading="Skilled Professionals"
+            description="Our team consists of 7 skilled software engineers, designers and business developers, dedicated to delivering high-quality, innovative solutions."
+          />
+          <HighlightItem
+            value="$12k"
+            heading="Projects Value"
+            description="Managed projects with a combined value of over $12k, demonstrating our capacity to handle and deliver fully functional and scalable products."
+          />
+        </div>
+      </SectionBlock>
 
       {/* CTA Section */}
       <div className="size-auto min-h-auto lg:h-screen lg:min-h-180 pb-1 flex flex-col justify-start items-stretch">
