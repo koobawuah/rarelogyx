@@ -36,8 +36,8 @@ export default function About() {
               <div className="size-auto relative overflow-hidden p-6 pb-10 pt-30 lg:pt-50 flex flex-col justify-end items-start gap-4 z-10 grow object-fill">
                 <PrimaryChips text="About Rarelogyx" />
                 <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-2">
-                  <HeadingH1>A corporate technology company</HeadingH1>
-                  <div className="py-1 flex flex-col justify-between items-stretch lg:items-start gap-6">
+                  <HeadingH1>A corporate technology company.</HeadingH1>
+                  <div className="size-auto lg:h-full py-1 flex flex-col justify-between items-stretch lg:items-start col-span-1 row-span-1 gap-6">
                     <p className="max-w-96 lg:max-w-[280px] text-primary text-sm leading-4">
                       We design, develop, and deploy systems that solve real
                       problems, drive growth, and deliver measurable value

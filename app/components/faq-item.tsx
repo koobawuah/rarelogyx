@@ -19,9 +19,9 @@ export function FAQItem({
     <Accordion transition={{ duration: 0.2, ease: "easeInOut" }}>
       <AccordionItem
         value={question}
-        className="size-auto px-6 py-5 flex flex-col items-stretch bg-aswhite/3 hover:bg-aswhite/10 rounded-lg border border-aswhite/10 cursor-pointer pointer-events-auto transition-all duration-250 text-clip shrink"
+        className="size-auto flex flex-col items-stretch bg-aswhite/3 hover:bg-aswhite/10 rounded-lg border border-aswhite/10 cursor-pointer pointer-events-auto transition-all duration-250 text-clip shrink"
       >
-        <AccordionTrigger className="">
+        <AccordionTrigger className="px-6 py-5 cursor-pointer pointer-events-auto ">
           <summary className="flex flex-row justify-start items-start gap-4 shrink cursor-pointer pointer-events-auto">
             <h2 className="text-left text-base block leading-5 font-medium text-aswhite uppercase grow">
               {question}
@@ -35,7 +35,7 @@ export function FAQItem({
         </AccordionTrigger>
 
         <AccordionContent className="size-auto pr-6 overflow-hidden text-clip">
-          <p className="size-auto max-w-140 box-border block mt-4 mb-0 text-sm text-left text-aswhite/70 font-normal leading-[120%]">
+          <p className="size-auto max-w-140 px-6 pb-5 box-border block mb-0 text-sm text-left text-aswhite/70 font-normal leading-[120%]">
             {answer}
           </p>
         </AccordionContent>

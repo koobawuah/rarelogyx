@@ -36,7 +36,7 @@ export default function PrimaryButton({
         </p>
         <p
           className={cn(
-            "text-center text-xs leading-3.5 text-primary font-normal uppercase -rotate-x-90 group-hover:rotate-x-0 transition-all origin-bottom transform-3d duration-400 absolute inset-auto bottom-0",
+            "text-center text-xs leading-[120%] text-primary font-normal uppercase -rotate-x-90 group-hover:rotate-x-0 transition-all origin-bottom transform-3d duration-400 absolute inset-auto bottom-0",
             variant === "white" ? "text-white" : "",
             variant === "transparent" ? "text-primary/75 font-medium" : ""
           )}
