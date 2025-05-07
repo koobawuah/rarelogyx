@@ -115,12 +115,12 @@ export default function Index() {
         <div className="w-full h-auto max-w-[960px] flex flex-col justify-start items-center">
           <PrimaryChips text="Featured Clients" variant="white" />
           <div className="w-full my-12 grid grid-cols-2 gap-[1px] lg:grid-cols-3 bg-white/10 rounded-lg overflow-hidden">
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67fcaac5ad82dcc3c1cfc9b4_monologo-white.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8e15f126ef81791c77245_versace-gold-logo-p-2000.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8bd68630dd52ec429cd48_cf73420e2c4cdf05e92b8cfd2643753b_BC%20Logo%20Complete%20-%20Horizontal.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8df4dbdfec39fa02a350b_amba-gallery-horizontal-final-p-2000.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67fcab5e19a050ba65654ce0_servinn-logo%5Bsec-transparent%5D-02-p-2000.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8e79057c69984d2e77262_bafla-logo.jpg" />
+            <LogoBlock src="/images/comp/monologo-white.png" />
+            <LogoBlock src="/images/comp/versace-gold-logo.png" />
+            <LogoBlock src="/images/comp/BC Logo Complete - Horizontal.png" />
+            <LogoBlock src="/images/comp/amba-gallery-horizontal-final.png" />
+            <LogoBlock src="/images/comp/servinn-logo[bw]-02.png" />
+            <LogoBlock src="/images/comp/bafla-logo.jpg" />
           </div>
           <p className="max-w-80 text-sm font-normal text-center text-white/70">
             We&apos;re honoured to have collaborated with visionary clients who
@@ -129,6 +129,7 @@ export default function Index() {
         </div>
       </SectionBlock>
 
+      {/* Projects section */}
       <SectionBlock containerContent="max-w-[1192px]">
         <div className="w-full h-auto mb-16 flex flex-col justify-start items-center gap-6 lg:mb-20">
           <div className="w-full max-w-[440px] h-auto flex flex-col justify-start items-center gap-4">
@@ -212,7 +213,7 @@ export default function Index() {
               }
               cta="Discover Our Services"
               link="/services"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f868ebad56d883013fc924_uk-black-tech-YDEiseFR_Q8-unsplash.jpg"
+              bgImage="/images/tech-group.jpg"
             />
             <NavCard
               chipTitle="Contact Us"
@@ -224,7 +225,7 @@ export default function Index() {
               }
               cta="Get In Touch"
               link="/contact-us"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f86989473eada6fb902a57_20fa007f0fd356ab36364e17fa68e029_the-jopwell-collection-kmBE0ircrQ0-unsplash.jpg"
+              bgImage="/images/lady-working-on-laptop.jpg"
             />
           </div>
         </div>

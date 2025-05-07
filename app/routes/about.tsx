@@ -13,6 +13,7 @@ import HeadingH1 from "~/components/heading-h1";
 import BlurBlock from "~/components/blur-block";
 import { HighlightItem } from "~/components/highlight-item";
 import { TextBlock } from "~/components/text-block";
+import { FAQItem } from "~/components/faq-item";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "RARELOGYX - About" }, { name: "description", content: "" }];
@@ -131,7 +132,7 @@ export default function About() {
       </SectionBlock>
 
       {/* Statistics Section */}
-      <SectionBlock className="py-40 lg:py-50">
+      <SectionBlock className="pt-40 lg:pt-50">
         {/* Left Heading Block Wrapper */}
         <div className="w-full mb-16 lg:mb-20 flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-end gap-6 relative">
           <div className="w-full max-w-70 lg:max-w-110 h-auto flex flex-col justify-start items-start gap-4">
@@ -161,6 +162,44 @@ export default function About() {
         </div>
       </SectionBlock>
 
+      {/* FAQ Section */}
+      <SectionBlock className="py-40" containerContent=" shrink ">
+        <div className="w-full h-auto mb-16 lg:mb-20 flex flex-col justify-start items-center gap-6 relative">
+          <div className="w-full max-w-70 lg:max-w-110 flex flex-col justify-start items-center gap-4">
+            <PrimaryChips text="FAQ" variant="white" />
+            <HeadingH2>Quick Answers to Common Questions</HeadingH2>
+          </div>
+        </div>
+        <div className="w-full flex flex-col items-stretch gap-2 lg:flex-row">
+          <div className="size-auto flex flex-col items-stretch gap-2 grow lg:w-1/2">
+            {siteConfig.about.faq &&
+              siteConfig.about.faq
+                .slice(0, 4)
+                .map(({ question, answer, open }, idx) => (
+                  <FAQItem
+                    key={question}
+                    question={question}
+                    answer={answer}
+                    open
+                  />
+                ))}
+          </div>
+          <div className="size-auto flex flex-col items-stretch gap-2 grow lg:w-1/2">
+            {siteConfig.about.faq &&
+              siteConfig.about.faq
+                .slice(4, siteConfig.about.faq.length)
+                .map(({ question, answer, open }, idx) => (
+                  <FAQItem
+                    key={question}
+                    question={question}
+                    answer={answer}
+                    open
+                  />
+                ))}
+          </div>
+        </div>
+      </SectionBlock>
+
       {/* CTA Section */}
       <div className="size-auto min-h-auto lg:h-screen lg:min-h-180 pb-1 flex flex-col justify-start items-stretch">
         <div className="w-full max-w-none lg:max-w-482 mx-auto px-1 flex flex-col justify-start items-stretch grow">
@@ -175,7 +214,7 @@ export default function About() {
               }
               cta="Discover Our Services"
               link="/services"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f868ebad56d883013fc924_uk-black-tech-YDEiseFR_Q8-unsplash.jpg"
+              bgImage="/images/tech-group.jpg"
             />
             <NavCard
               chipTitle="Contact Us"
@@ -187,7 +226,7 @@ export default function About() {
               }
               cta="Get In Touch"
               link="/contact-us"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f86989473eada6fb902a57_20fa007f0fd356ab36364e17fa68e029_the-jopwell-collection-kmBE0ircrQ0-unsplash.jpg"
+              bgImage="/images/lady-working-on-laptop.jpg"
             />
           </div>
         </div>

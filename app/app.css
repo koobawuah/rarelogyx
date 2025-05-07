@@ -3,6 +3,7 @@
 @theme {
   --font-sans: "IBM plex sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-aswhite: #f2f2f2;
   --color-primary: #122c5f;
   --color-bg-primary: #071839;
 
