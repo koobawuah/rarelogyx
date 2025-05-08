@@ -110,7 +110,7 @@ export default function Projects() {
               }
               cta="Discover Our Services"
               link="/services"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f868ebad56d883013fc924_uk-black-tech-YDEiseFR_Q8-unsplash.jpg"
+              bgImage="/images/tech-group.jpg"
             />
             <NavCard
               chipTitle="Contact Us"
@@ -122,7 +122,7 @@ export default function Projects() {
               }
               cta="Get In Touch"
               link="/contact-us"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f86989473eada6fb902a57_20fa007f0fd356ab36364e17fa68e029_the-jopwell-collection-kmBE0ircrQ0-unsplash.jpg"
+              bgImage="/images/lady-working-on-laptop.jpg"
             />
           </div>
         </div>

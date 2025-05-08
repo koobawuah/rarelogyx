@@ -74,17 +74,17 @@ export default function About() {
             </div>
             <div className="w-full h-auto flex flex-col justify-start items-stretch gap-2 lg:grid lg:grid-cols-3">
               <BlurBlock
-                icon="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e2395_Idea.svg"
+                icon="/images/icons/idea.svg"
                 title="Creative Vision"
                 description="Bringing innovative and imaginative designs to life with unique flair."
               />
               <BlurBlock
-                icon="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e2396_Tool%20Box.svg"
+                icon="/images/icons/toolbox.svg"
                 title="Tailored Solutions"
                 description="Customizing products to perfectly align with client needs and goals."
               />
               <BlurBlock
-                icon="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23a5_Cube.svg"
+                icon="/images/icons/cube.svg"
                 title="Best Practices"
                 description="Improving operations, enhancing user experiences with standard solutions."
               />

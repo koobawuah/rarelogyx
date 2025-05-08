@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import ScreenLines from "./components/screen-lines";
+import { GlobalPendingIndicator } from "./components/global-pending-indicator";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -45,6 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="relative">
+        <GlobalPendingIndicator />
         <ScreenLines />
         {children}
         <ScrollRestoration />
