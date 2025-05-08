@@ -32,7 +32,7 @@ export default function Index() {
                   <h1 className="max-w-2xl my-0 text-4xl lg:text-[64px] font-normal text-primary tracking-[-0.04em] lg:tracking-[-0.04em] text-balance col-span-3">
                     Digital solutions, Engineered for Growth.
                   </h1>
-                  <div className="py-1 flex flex-col justify-between items-stretch lg:items-start gap-6">
+                  <div className="py-1 flex flex-col justify-between items-stretch lg:items-start lg:h-full gap-6">
                     <p className="max-w-96 lg:max-w-[280px] text-primary text-sm leading-4">
                       We deliver intelligent software solutions, from apps to
                       branding, to turning your ideas into fully functional
@@ -144,19 +144,21 @@ export default function Index() {
         <div className="w-full h-auto">
           <div className="size-auto flex flex-col justify-start items-stretch gap-1">
             {siteConfig.projects.length > 0 ? (
-              siteConfig.projects.map((p, id) => (
-                <ProjectItem
-                  key={p.title}
-                  title={p.title}
-                  description={p.description}
-                  location={p.location}
-                  typeOfWork={p.typeOfWork}
-                  completionDate={p.completionDate}
-                  tags={p.tags}
-                  projectImage={p.projectImage}
-                  reverse={id % 2 !== 0}
-                />
-              ))
+              siteConfig.projects
+                .slice(0, 3)
+                .map((p, id) => (
+                  <ProjectItem
+                    key={p.title}
+                    title={p.title}
+                    description={p.description}
+                    location={p.location}
+                    typeOfWork={p.typeOfWork}
+                    completionDate={p.completionDate}
+                    tags={p.tags}
+                    projectImage={p.projectImage}
+                    reverse={id % 2 !== 0}
+                  />
+                ))
             ) : (
               <div className="size-auto block py-7 px-6 border border-white/10 bg-white/3">
                 <p className="text-white text-base text-center font-medium uppercase">

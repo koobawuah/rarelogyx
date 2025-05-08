@@ -35,9 +35,9 @@ export default function Projects() {
                 <PrimaryChips text="Portfolio" />
                 <div className="w-full flex flex-col justify-start items-stretch lg:items-start lg:grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-2">
                   <h1 className="max-w-2xl my-0 text-4xl lg:text-[64px] font-normal text-primary tracking-[-0.04em] lg:tracking-[-0.04em] text-balance col-span-3">
-                    Showcasing our signature Projects
+                    Showcasing our Signature Projects
                   </h1>
-                  <div className="py-1 flex flex-col justify-between items-stretch lg:items-start gap-6">
+                  <div className="py-1 flex flex-col justify-between items-stretch lg:items-start lg:h-full gap-6">
                     <p className="max-w-96 lg:max-w-[280px] text-primary text-sm leading-4">
                       Browse our portfolio to see a collection of innovative and
                       impactful projects that highlight our expertise.
@@ -52,7 +52,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <SectionBlock className="pt-0" containerContent="max-w-[1192px] my-50">
+      <SectionBlock className="py-40" containerContent="max-w-[1192px]">
         <div className="w-full h-auto mb-16 flex flex-col justify-start items-center gap-6 lg:mb-20">
           <div className="w-full max-w-[440px] h-auto flex flex-col justify-start items-center gap-4">
             <PrimaryChips variant="white" text="Our Projects" />

@@ -1,58 +1,17 @@
 import BigButton from "~/components/big-button";
 import Footer from "~/components/footer/footer";
-import FormInput from "~/components/form-input";
-import FormInputSelect from "~/components/form-input-select";
-import FormTextArea from "~/components/form-textarea";
 import GridLines from "~/components/grid-lines";
 import Header from "~/components/header/header";
 import HeadingH1 from "~/components/heading-h1";
-import HeadingH2 from "~/components/heading-h2";
 import PrimaryChips from "~/components/primary-chips";
-import { cn } from "~/libs/utils";
-import type { Route } from "../+types/root";
-import { Form, useActionData, useNavigation } from "react-router";
-import { Resend } from "resend";
 import NavCard from "~/components/nav-card";
 import SectionBlock from "~/components/section-block";
 import LogoBlock from "~/components/logo-block";
 import PrimaryButton from "~/components/primary-button";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export async function action({ request }: Route.ActionArgs) {
-  const formData = await request.formData();
-  const fullname = String(formData.get("fullname"));
-  const email = String(formData.get("email"));
-  const phone = String(formData.get("phone"));
-  const inquiry = String(formData.get("inquiryType"));
-  const message = String(formData.get("message"));
-
-  console.log("Form Data:", { fullname, email, phone, inquiry, message });
-  //Send email with resend
-  try {
-    const res = await resend.emails.send({
-      from: "Rarelogyx Official Website <contact@rarelogyx.com>",
-      to: process.env.CONTACT_EMAIL ?? "contact@rarelogyx.com",
-      subject: `Mail from ${fullname} - Rarelogyx Contact Us Page`,
-      html: `
-      <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; line-height: 1.5;">
-        <h2 style="color: #122c5f;">Mail from ${fullname} - Rarelogyx Contact Us Page</h2>
-        <p><strong>Full Name:</strong> ${fullname}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Inquiry Type:</strong> ${inquiry}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      </div>
-    `,
-    });
-    console.log("Email sent successfully:", res);
-    return { response: { success: true, error: null } };
-  } catch (err) {
-    console.error("Error sending email:", err);
-    return { response: { success: null, error: "Failed to send email" } };
-  }
-}
+import HeadingH2 from "~/components/heading-h2";
+import HeadingH3 from "~/components/heading-h3";
+import { siteConfig } from "~/site.config";
+import { ServiceCard } from "~/components/service-card";
 
 export default function Services() {
   return (
@@ -107,6 +66,68 @@ export default function Services() {
         </div>
       </div>
 
+      {/* Service Examples Sections */}
+      <div className="size-auto min-h-auto lg:h-screen lg:min-h-180 pb-1 flex flex-col items-stretch">
+        {/* Wide Container */}
+        <div className="w-full max-w-none lg:max-w-482 mx-auto px-1 flex flex-col justify-start items-stretch grow">
+          {/* Service Images Grid */}
+          <div className="size-auto flex flex-col justify-start items-stretch gap-1 grow lg:grid lg:grid-cols-2">
+            <div className="size-auto flex flex-col justify-start items-stretch gap-1 lg:grid lg:grid-cols-1 shrink">
+              <div className="w-full h-90 lg:h-auto block overflow-hidden rounded-lg border border-aswhite/20 col-span-1 relative shrink">
+                <img
+                  src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f973882ab7c3b1369ee601_buildbafla-site.webp"
+                  alt="Rarelogyx Website Service - Bafla"
+                  className="size-full max-w-full object-cover overflow-clip inline-block absolute inset-0"
+                />
+              </div>
+              <div className="w-full h-90 lg:h-auto block overflow-hidden rounded-lg border border-aswhite/20 relative shrink">
+                <img
+                  src="/images/BO App Dash.png"
+                  alt="Rarelogyx Web App Service - Bonsu Capital"
+                  className="size-full max-w-full object-cover overflow-clip inline-block absolute inset-0"
+                />
+              </div>
+            </div>
+            <div className="w-full h-90 lg:h-auto block overflow-hidden rounded-lg border border-aswhite/20 relative shrink col-span-1">
+              <img
+                src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f981b2fdab5fa09a057be8_26609d8a8c34f5b57ec24ea159ca554c_servinn-app.png"
+                alt="Rarelogyx Web App Service - Servinn App"
+                className="size-full max-w-full object-cover overflow-clip inline-block absolute inset-0"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="size-auto block pb-1">
+        <div className="w-full max-w-none lg:max-w-482 px-1 mx-auto block ">
+          <div className="size-auto grid grid-cols-1 lg:grid-cols-3 gap-1">
+            {/* Service Block Header */}
+            <div className="size-auto px-6 py-16 lg:py-20 bg-aswhite flex flex-col justify-start items-center col-span-1 lg:col-span-3 rounded-lg">
+              <div className="w-full max-w-100 lg:max-w-170 h-auto flex flex-col items-center gap-4 shrink">
+                <PrimaryChips text="Expert Solutions" />
+                <HeadingH2 className="text-primary my-0">
+                  Rarelogyx delivers IT solutions and app development in Ghana.
+                </HeadingH2>
+              </div>
+            </div>
+            {siteConfig.services.length > 0
+              ? siteConfig.services.map(
+                  ({ icon, heading, description, image }, idx) => (
+                    <ServiceCard
+                      key={heading}
+                      icon={icon}
+                      heading={heading}
+                      description={description}
+                      image={image}
+                    />
+                  )
+                )
+              : null}
+          </div>
+        </div>
+      </div>
+
       {/* social proof */}
       <SectionBlock className="py-50">
         <div className="w-full h-auto max-w-[960px] flex flex-col justify-start items-center">
@@ -131,16 +152,11 @@ export default function Services() {
         <div className="w-full max-w-none lg:max-w-482 mx-auto px-1 flex flex-col justify-start items-stretch grow">
           <div className="size-auto flex flex-col justify-start items-stretch gap-1 grow lg:grid lg:grid-cols-2">
             <NavCard
-              chipTitle="Our Services"
-              title={
-                <span>
-                  Your Vision,
-                  <br /> Our Expertise
-                </span>
-              }
-              cta="Discover Our Services"
-              link="/services"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f868ebad56d883013fc924_uk-black-tech-YDEiseFR_Q8-unsplash.jpg"
+              chipTitle="Our Projects"
+              title={<span>Projects Developed By The Team</span>}
+              cta="Explore Portfolio"
+              link="/projects"
+              bgImage="/images/tech-group.jpg"
             />
             <NavCard
               chipTitle="Contact Us"
@@ -152,7 +168,7 @@ export default function Services() {
               }
               cta="Get In Touch"
               link="/contact-us"
-              bgImage="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f86989473eada6fb902a57_20fa007f0fd356ab36364e17fa68e029_the-jopwell-collection-kmBE0ircrQ0-unsplash.jpg"
+              bgImage="/images/lady-working-on-laptop.jpg"
             />
           </div>
         </div>

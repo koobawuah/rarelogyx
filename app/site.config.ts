@@ -51,6 +51,50 @@ export const siteConfig = {
       },
     ],
   },
+  services: [
+    {
+      icon: "/images/icons/cube.svg",
+      heading: "Application Development",
+      description:
+        "Creating innovative and functional software or web applications that align with your vision.",
+      image: "/images/susubox-shot.webp",
+    },
+    {
+      icon: "/images/icons/white chevron left.svg",
+      heading: "Website Design",
+      description:
+        "Designing and developing functional websites that elevate your business overall experience.",
+      image: "/images/monodesignstudio.webp",
+    },
+    {
+      icon: "/images/icons/leaf.svg",
+      heading: "Brand Identity Design",
+      description:
+        "We see longevity in your visions, lets design a unique identity for the world to see it too.",
+      image: "/images/ttetl-brochure-front.webp",
+    },
+    {
+      icon: "/images/icons/idea.svg",
+      heading: "IT Consultation",
+      description:
+        "From system architecture to infrastructure planning and digital transformation strategies.",
+      image: "/images/office-space.jpg",
+    },
+    {
+      icon: "/images/icons/API.svg",
+      heading: "API & AI Integrations",
+      description:
+        "We make your in-house systems smarter, faster and great at communicating with other systems.",
+      image: "/images/grischa.avif",
+    },
+    {
+      icon: "/images/icons/curve.svg",
+      heading: "MVP",
+      description:
+        "We help early-stage startups validate ideas with speed. With a testable version of your product.",
+      image: "/images/rarelogyx.logomark.png",
+    },
+  ],
   projects: [
     {
       title: "Bonsu Capital Limited",
@@ -93,6 +137,31 @@ export const siteConfig = {
       tags: ["Web Application Design", "Web Application Development"],
       projectImage:
         "https://cdn.prod.website-files.com/67f8396891b9193c487e2398/67f90267da1d10c89d7bda3d_header-bg-buildbafla-p-2000.jpg",
+    },
+    {
+      title: "Amba Gallery",
+      description:
+        "Amba was a logo and brand identity design work, done in 2020. It was tough to come up with a long lasting and brand dominant logo for Amba...",
+      location: "Accra, Ghana",
+      typeOfWork: "Brand Identity Design",
+      completionDate: "August 2020",
+      tags: ["Logo Design", "Brand Identity Design"],
+      projectImage:
+        "https://cdn.prod.website-files.com/67f8396891b9193c487e2398/67fba80d84b005718d91b954_IMG_1555.png",
+    },
+  ],
+  socials: [
+    {
+      label: "LinkedIn",
+      to: "https://www.linkedin.com/company/rarelogyx",
+    },
+    {
+      label: "X (Twitter)",
+      to: "https://www.x.com/",
+    },
+    {
+      label: "Instagram",
+      to: "https://www.instagram.com/",
     },
   ],
 };

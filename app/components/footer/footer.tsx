@@ -1,5 +1,6 @@
 import GridLines from "../grid-lines";
 import FooterMenu from "./footer-menu";
+import { siteConfig } from "~/site.config";
 
 export default function Footer() {
   return (
@@ -46,17 +47,7 @@ export default function Footer() {
                   { to: "/contact-us", label: "Contact Us" },
                 ]}
               />
-              <FooterMenu
-                heading="Follow Us"
-                links={[
-                  {
-                    to: "https://www.linkedin.com/company/rarelogyx",
-                    label: "LinkedIn",
-                  },
-                  { to: "https://x.com/#", label: "X (Twitter)" },
-                  { to: "https://instagram.com/#", label: "Instagram" },
-                ]}
-              />
+              <FooterMenu heading="Follow Us" links={siteConfig.socials} />
               <FooterMenu
                 heading="Address"
                 links={[
