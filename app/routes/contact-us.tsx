@@ -15,6 +15,18 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "RARELOGYX - Contact Us" },
+    { property: "og:title", content: "RARELOGYX - Contact Us" },
+    {
+      name: "description",
+      content:
+        "Let’s work together to bring your vision to life. Reach out today to explore how we can create innovative, functional products that exceed your expectations and needs.",
+    },
+  ];
+}
+
 export async function action({ request }: Route.ActionArgs) {
   const formData = await request.formData();
   const fullname = String(formData.get("fullname"));
@@ -74,9 +86,9 @@ export default function ContactUs() {
                   </HeadingH1>
                   <div className="size-auto py-1 flex flex-col justify-between items-stretch lg:h-full lg:items-start lg:justify-end gap-6">
                     <p className="max-w-96 lg:max-w-[280px] text-primary text-sm leading-4">
-                      Let&apos;s work together to bring your vision to life.
-                      Reach out to explore how we can create solutions that
-                      exceed your expectations.
+                      Let’s work together to bring your vision to life. Reach
+                      out to explore how we can create solutions that exceed
+                      your expectations.
                     </p>
                   </div>
                 </div>
@@ -89,7 +101,7 @@ export default function ContactUs() {
                 <BigButton
                   icon={
                     <img
-                      src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23ad_Mail.svg"
+                      src="/images/icons/mail.svg"
                       alt="Mail Rarelogyx Icon"
                       className="size-6 max-w-full"
                     />
@@ -103,7 +115,7 @@ export default function ContactUs() {
                 <BigButton
                   icon={
                     <img
-                      src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23ab_Phone.svg"
+                      src="/images/icons/phone.svg"
                       alt="Mail Rarelogyx Icon"
                       className="size-6 max-w-full"
                     />
@@ -118,7 +130,7 @@ export default function ContactUs() {
               <BigButton
                 icon={
                   <img
-                    src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23ac_Building.svg"
+                    src="/images/icons/building.svg"
                     alt="Visit Rarelogyx Icon"
                     className="size-6 max-w-full"
                   />
@@ -142,7 +154,7 @@ export default function ContactUs() {
           <div className="size-auto flex flex-col justify-start items-stretch gap-1 grow lg:grid lg:grid-cols-2">
             <div className="w-full h-140 lg:h-auto overflow-hidden col-span-1 relative rounded-lg border border-white/20 shrink order-last lg:order-none">
               <img
-                src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f9708b8f8a5c8a050c0529_joyce-busola-L9U5UUScnHY-unsplash.jpg"
+                src="/images/lady-on-phone.jpg"
                 alt="Contact Rarelogyx - Lady on the phone"
                 className="size-full max-w-full mx-auto inline-block absolute inset-0 object-cover overflow-clip"
               />

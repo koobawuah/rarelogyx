@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "IBM plex sans", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "IBM plex sans", sans-serif;
   --color-aswhite: #f2f2f2;
   --color-primary: #122c5f;
   --color-bg-primary: #071839;
@@ -47,6 +46,8 @@
 
 html,
 body {
+  font-family: "IBM Plex Sans", sans-serif;
+
   @apply bg-bg-primary;
 
   @media (prefers-color-scheme: dark) {

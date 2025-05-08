@@ -13,7 +13,12 @@ import PrimaryButton from "~/components/primary-button";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "RARELOGYX - Projects" },
-    { name: "description", content: "" },
+    { property: "og:title", content: "RARELOGYX - Projects" },
+    {
+      name: "description",
+      content:
+        "Explore our portfolio, where ideas become digital realities. From business websites and mobile apps to complex software architectures projects.",
+    },
   ];
 }
 
@@ -111,7 +116,7 @@ export default function Projects() {
               chipTitle="Contact Us"
               title={
                 <span>
-                  Let&apos;s Start the
+                  Let’s Start the
                   <br /> Conversation
                 </span>
               }

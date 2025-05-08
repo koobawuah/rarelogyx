@@ -3,7 +3,6 @@ import type { Route } from "../+types/root";
 import PrimaryChips from "~/components/primary-chips";
 import HeadingH2 from "~/components/heading-h2";
 import { siteConfig } from "~/site.config";
-import ProjectItem from "~/components/project-item";
 import NavCard from "~/components/nav-card";
 import Footer from "~/components/footer/footer";
 import GridLines from "~/components/grid-lines";
@@ -16,7 +15,15 @@ import { TextBlock } from "~/components/text-block";
 import { FAQItem } from "~/components/faq-item";
 
 export function meta({}: Route.MetaArgs) {
-  return [{ title: "RARELOGYX - About" }, { name: "description", content: "" }];
+  return [
+    { title: "RARELOGYX - About" },
+    { property: "og:title", content: "RARELOGYX - About" },
+    {
+      name: "description",
+      content:
+        "Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
+    },
+  ];
 }
 
 export default function About() {
@@ -220,7 +227,7 @@ export default function About() {
               chipTitle="Contact Us"
               title={
                 <span>
-                  Let&apos;s Start the
+                  Let’s Start the
                   <br /> Conversation
                 </span>
               }

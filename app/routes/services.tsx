@@ -9,9 +9,21 @@ import SectionBlock from "~/components/section-block";
 import LogoBlock from "~/components/logo-block";
 import PrimaryButton from "~/components/primary-button";
 import HeadingH2 from "~/components/heading-h2";
-import HeadingH3 from "~/components/heading-h3";
 import { siteConfig } from "~/site.config";
 import { ServiceCard } from "~/components/service-card";
+import type { Route } from "../+types/root";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "RARELOGYX - Services" },
+    { property: "og:title", content: "RARELOGYX - Services" },
+    {
+      name: "description",
+      content:
+        "We provide personalized services that integrate our expertise with innovative solutions to deliver remarkable results. Explore tailored solutions that bring your vision to life.",
+    },
+  ];
+}
 
 export default function Services() {
   return (
@@ -75,7 +87,7 @@ export default function Services() {
             <div className="size-auto flex flex-col justify-start items-stretch gap-1 lg:grid lg:grid-cols-1 shrink">
               <div className="w-full h-90 lg:h-auto block overflow-hidden rounded-lg border border-aswhite/20 col-span-1 relative shrink">
                 <img
-                  src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f973882ab7c3b1369ee601_buildbafla-site.webp"
+                  src="/images/buildbafla-site.webp"
                   alt="Rarelogyx Website Service - Bafla"
                   className="size-full max-w-full object-cover overflow-clip inline-block absolute inset-0"
                 />
@@ -90,7 +102,7 @@ export default function Services() {
             </div>
             <div className="w-full h-90 lg:h-auto block overflow-hidden rounded-lg border border-aswhite/20 relative shrink col-span-1">
               <img
-                src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f981b2fdab5fa09a057be8_26609d8a8c34f5b57ec24ea159ca554c_servinn-app.png"
+                src="/images/servinn-app.png"
                 alt="Rarelogyx Web App Service - Servinn App"
                 className="size-full max-w-full object-cover overflow-clip inline-block absolute inset-0"
               />
@@ -133,15 +145,15 @@ export default function Services() {
         <div className="w-full h-auto max-w-[960px] flex flex-col justify-start items-center">
           <PrimaryChips text="Featured Clients" variant="white" />
           <div className="w-full my-12 grid grid-cols-2 gap-[1px] lg:grid-cols-3 bg-white/10 rounded-lg overflow-hidden">
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67fcaac5ad82dcc3c1cfc9b4_monologo-white.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8e15f126ef81791c77245_versace-gold-logo-p-2000.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8bd68630dd52ec429cd48_cf73420e2c4cdf05e92b8cfd2643753b_BC%20Logo%20Complete%20-%20Horizontal.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8df4dbdfec39fa02a350b_amba-gallery-horizontal-final-p-2000.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67fcab5e19a050ba65654ce0_servinn-logo%5Bsec-transparent%5D-02-p-2000.png" />
-            <LogoBlock src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8e79057c69984d2e77262_bafla-logo.jpg" />
+            <LogoBlock src="/images/comp/monologo-white.png" />
+            <LogoBlock src="/images/comp/versace-gold-logo.png" />
+            <LogoBlock src="/images/comp/BC Logo Complete - Horizontal.png" />
+            <LogoBlock src="/images/comp/amba-gallery-horizontal-final.png" />
+            <LogoBlock src="/images/comp/servinn-logo[bw]-02.png" />
+            <LogoBlock src="/images/comp/bafla-logo.jpg" />
           </div>
           <p className="max-w-80 text-sm font-normal text-center text-white/70">
-            We&apos;re honoured to have collaborated with visionary clients who
+            We’re honoured to have collaborated with visionary clients who
             challenge us to innovate and excel.
           </p>
         </div>
@@ -162,7 +174,7 @@ export default function Services() {
               chipTitle="Contact Us"
               title={
                 <span>
-                  Let&apos;s Start the
+                  Let’s Start the
                   <br /> Conversation
                 </span>
               }

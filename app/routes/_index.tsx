@@ -11,6 +11,24 @@ import PrimaryChips from "~/components/primary-chips";
 import ProjectItem from "~/components/project-item";
 import SectionBlock from "~/components/section-block";
 import { siteConfig } from "~/site.config";
+import type { Route } from "../+types/root";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    {
+      title: "RARELOGYX - Digital Solutions, Engineered for Growth.",
+    },
+    {
+      property: "og:title",
+      content: "RARELOGYX - Digital Solutions, Engineered for Growth.",
+    },
+    {
+      name: "description",
+      content:
+        "Rarelogyx is a software and IT solutions company founded with a mission to empower organizations through technology. Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
+    },
+  ];
+}
 
 export default function Index() {
   return (
@@ -95,12 +113,12 @@ export default function Index() {
                 className="w-auto max-w-full h-[360px] lg:size-auto border border-white/20 rounded-lg overflow-clip object-cover grow box-border"
               />
               <div className="bg-[#f2f2f2] py-7 px-6 flex flex-col justify-start items-start gap-12 shrink rounded-lg">
-                <div className="w-full max-w-xl flex flex-col justify-start items-start gap-4">
+                <div className="w-full max-w-150 flex flex-col justify-start items-start gap-4">
                   <PrimaryChips text="About Us" />
-                  <p className="text-primary font-normal text-xl lg:text-2xl tracking-tighter">
-                    Since 2016, we&apos;ve helped startups and enterprises
-                    across Ghana and beyond bring their ideas to life with
-                    reliable, elegant, and purpose-built digital systems.
+                  <p className="text-primary font-normal text-clip text-xl lg:text-2xl leading-[112%] tracking-[-0.48px]">
+                    Since 2016, we’ve helped startups and enterprises across
+                    Ghana and beyond bring their ideas to life with reliable,
+                    elegant, and purpose-built digital systems.
                   </p>
                 </div>
                 <PrimaryButton to="/about" text="Learn more" />
@@ -123,7 +141,7 @@ export default function Index() {
             <LogoBlock src="/images/comp/bafla-logo.jpg" />
           </div>
           <p className="max-w-80 text-sm font-normal text-center text-white/70">
-            We&apos;re honoured to have collaborated with visionary clients who
+            We’re honoured to have collaborated with visionary clients who
             challenge us to innovate and excel.
           </p>
         </div>
@@ -221,7 +239,7 @@ export default function Index() {
               chipTitle="Contact Us"
               title={
                 <span>
-                  Let&apos;s Start the
+                  Let’s Start the
                   <br /> Conversation
                 </span>
               }
