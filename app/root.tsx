@@ -12,6 +12,7 @@ import "./app.css";
 import ScreenLines from "./components/screen-lines";
 import { GlobalPendingIndicator } from "./components/global-pending-indicator";
 import ErrorPage from "./components/404";
+import { Analytics } from "@vercel/analytics/next";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -46,6 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <ScreenLines />
         {children}
         <ScrollRestoration />
+        <Analytics />
         <Scripts />
       </body>
     </html>
