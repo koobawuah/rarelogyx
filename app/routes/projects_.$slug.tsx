@@ -10,7 +10,6 @@ import IconBlock from "~/components/icon-info-block";
 import { ChevronLeftIcon } from "@radix-ui/react-icons";
 import BlockSection from "~/components/block-section";
 import Footer from "~/components/footer/footer";
-import capitalize from "~/util/capitalize";
 import HeadingH2 from "~/components/heading-h2";
 import ProjectItem from "~/components/project-item";
 
@@ -26,16 +25,20 @@ export function meta({ location, params }: Route.MetaArgs) {
       content: `${project?.description}`,
     },
     {
-      property: "og:tile",
+      property: "og:title",
       content: `${project?.title} - RARELOGYX PROJECT`,
     },
     {
-      property: "og:description",
+      name: "description",
       content: `${project?.description}`,
     },
     {
       property: "og:image",
       content: `https://rarelogyx.com${project?.projectImage}`,
+    },
+    {
+      property: "og:url",
+      content: `https://rarelogyx.com/projects${project?.slug}`,
     },
   ];
 }
