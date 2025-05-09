@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import ScreenLines from "./components/screen-lines";
 import { GlobalPendingIndicator } from "./components/global-pending-indicator";
+import ErrorPage from "./components/404";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -61,15 +62,16 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
+  let message = "Ooops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message =
+      error.status === 404 ? "Ooops... Page Not Found" : "An Error Occured";
     details =
       error.status === 404
-        ? "The requested page could not be found."
+        ? "We couldn’t find the page you requested. Please go back to our homepage for more information."
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
@@ -77,14 +79,15 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto text-aswhite">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
+    <ErrorPage message={message} details={details} stack={stack} />
+    // <main className="pt-16 p-4 container mx-auto">
+    //   <h1>{message}</h1>
+    //   <p>{details}</p>
+    //   {stack && (
+    //     <pre className="w-full p-4 overflow-x-auto text-aswhite">
+    //       <code>{stack}</code>
+    //     </pre>
+    //   )}
+    // </main>
   );
 }

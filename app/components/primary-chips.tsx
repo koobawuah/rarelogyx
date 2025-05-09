@@ -1,11 +1,14 @@
+import type { ClassValue } from "clsx";
 import { cn } from "~/libs/utils";
 
 export default function PrimaryChips({
   text,
+  className,
   variant,
   animate = true,
 }: {
   text: string;
+  className?: ClassValue | string;
   variant?: "default" | "white" | "blur";
   animate?: boolean;
 }) {
@@ -14,7 +17,8 @@ export default function PrimaryChips({
       className={cn(
         "max-w-max flex items-center gap-x-1.5 py-[6px] px-[10px] border border-primary rounded-full ",
         variant === "white" ? "border-white/10" : "",
-        variant === "blur" ? " backdrop-blur-[10px] border-white/10" : ""
+        variant === "blur" ? " backdrop-blur-[10px] border-white/10" : "",
+        className
       )}
     >
       <span

@@ -11,14 +11,14 @@ export default function BigButton({
 }: {
   icon?: React.ReactNode;
   name: string;
-  to: string;
+  to?: string;
   description: string;
   variation?: "default" | "withIcon";
   bgColor?: string;
 }) {
   return (
     <Link
-      to={to}
+      to={to ?? ""}
       className={cn(
         "w-auto group h-auto bg-primary hover:opacity-85 flex flex-col justify-start items-stretch gap-x-1.5 py-7 px-6 grow rounded-lg select-none gap-12 transition-all duration-300 shrink",
         icon ? "gap-10" : "lg:gap-20"

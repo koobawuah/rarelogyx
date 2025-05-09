@@ -9,7 +9,7 @@ export default function PrimaryButton({
 }: {
   to?: string;
   text: string;
-  variant?: "default" | "white" | "transparent";
+  variant?: "default" | "white" | "transparent" | "ghost";
   onClick?: () => void;
 }) {
   const naviagate = useNavigate();
@@ -21,7 +21,8 @@ export default function PrimaryButton({
       className={cn(
         "size-auto min-w-0 min-h-0 rounded-full px-[18px] py-3 bg-primary border border-primary hover:bg-transparent group duration-400 shrink cursor-pointer",
         variant === "white" ? "bg-white border-white" : "",
-        variant === "transparent" ? "bg-transparent border-none" : ""
+        variant === "transparent" ? "bg-transparent border-none" : "",
+        variant === "ghost" ? "bg-transparent border-none px-1" : ""
       )}
     >
       <div className="relative flex flex-col jutsify-start items-center">
@@ -29,7 +30,8 @@ export default function PrimaryButton({
           className={cn(
             "text-center text-xs leading-3.5 text-[#f2f2f2] font-normal uppercase rotate-x-0 group-hover:rotate-x-90 transition-all origin-top transform-3d duration-400",
             variant === "white" ? "text-bg-primary" : "",
-            variant === "transparent" ? "text-primary font-medium" : ""
+            variant === "transparent" ? "text-primary font-medium" : "",
+            variant === "ghost" ? "text-aswhite font-medium" : ""
           )}
         >
           {text}
@@ -38,7 +40,8 @@ export default function PrimaryButton({
           className={cn(
             "text-center text-xs leading-[120%] text-primary font-normal uppercase -rotate-x-90 group-hover:rotate-x-0 transition-all origin-bottom transform-3d duration-400 absolute inset-auto bottom-0",
             variant === "white" ? "text-white" : "",
-            variant === "transparent" ? "text-primary/75 font-medium" : ""
+            variant === "transparent" ? "text-primary/75 font-medium" : "",
+            variant === "ghost" ? "text-aswhite/75 font-medium" : ""
           )}
         >
           {text}
