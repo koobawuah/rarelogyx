@@ -27,6 +27,14 @@ export function meta({}: Route.MetaArgs) {
       content:
         "Rarelogyx is a software and IT solutions company founded with a mission to empower organizations through technology. Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
     },
+    {
+      property: "og:image",
+      content: "https://rarelogyx.com/images/Cover.png",
+    },
+    {
+      property: "og:url",
+      content: "https://rarelogyx.com",
+    },
   ];
 }
 

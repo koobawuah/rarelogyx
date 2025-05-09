@@ -29,7 +29,7 @@ export function meta({ location, params }: Route.MetaArgs) {
       content: `${project?.title} - RARELOGYX PROJECT`,
     },
     {
-      name: "description",
+      property: "og:description",
       content: `${project?.description}`,
     },
     {

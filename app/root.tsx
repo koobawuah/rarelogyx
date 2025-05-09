@@ -37,11 +37,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <title>RARELOGYX - Digital Solutions, Engineered for Growth.</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          property="og:image"
-          content="https://rarelogyx.com/images/Cover.png"
-        />
-        <meta property="og:url" content="https://rarelogyx.com" />
         <meta property="og:type" content="website" />
         <Meta />
         <Links />
