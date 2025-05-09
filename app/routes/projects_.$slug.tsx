@@ -239,6 +239,7 @@ export default function ProjectPage() {
           <div className="size-auto flex flex-col justify-start items-stretch gap-1">
             {siteConfig.projects.length > 0 ? (
               siteConfig.projects
+                .filter((p) => p.slug !== pageData?.slug)
                 .sort(() => 0.5 - Math.random())
                 .slice(0, 2)
                 .map((p, id) => (
