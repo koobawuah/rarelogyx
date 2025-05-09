@@ -38,7 +38,7 @@ export function meta({ location, params }: Route.MetaArgs) {
     },
     {
       property: "og:url",
-      content: `https://rarelogyx.com/projects${project?.slug}`,
+      content: `https://rarelogyx.com/projects/${project?.slug}`,
     },
   ];
 }

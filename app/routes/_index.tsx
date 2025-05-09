@@ -28,6 +28,11 @@ export function meta({}: Route.MetaArgs) {
         "Rarelogyx is a software and IT solutions company founded with a mission to empower organizations through technology.",
     },
     {
+      property: "og:description",
+      content:
+        "Rarelogyx is a software and IT solutions company founded with a mission to empower organizations through technology.",
+    },
+    {
       property: "og:image",
       content: "https://rarelogyx.com/images/Cover.png",
     },

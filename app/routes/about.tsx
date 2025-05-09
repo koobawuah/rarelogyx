@@ -23,6 +23,19 @@ export function meta({}: Route.MetaArgs) {
       content:
         "Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
     },
+    {
+      property: "og:description",
+      content:
+        "Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
+    },
+    {
+      property: "og:image",
+      content: "https://rarelogyx.com/images/Cover.png",
+    },
+    {
+      property: "og:url",
+      content: "https://rarelogyx.com/about",
+    },
   ];
 }
 

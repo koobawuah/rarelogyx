@@ -24,6 +24,19 @@ export function meta({}: Route.MetaArgs) {
       content:
         "Let’s work together to bring your vision to life. Reach out today to explore how we can create innovative, functional products that exceed your expectations and needs.",
     },
+    {
+      property: "og:description",
+      content:
+        "Let’s work together to bring your vision to life. Reach out today to explore how we can create innovative, functional products that exceed your expectations and needs.",
+    },
+    {
+      property: "og:image",
+      content: "https://rarelogyx.com/images/Cover.png",
+    },
+    {
+      property: "og:url",
+      content: "https://rarelogyx.com/contact-us",
+    },
   ];
 }
 

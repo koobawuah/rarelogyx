@@ -22,6 +22,19 @@ export function meta({}: Route.MetaArgs) {
       content:
         "We provide personalized services that integrate our expertise with innovative solutions to deliver remarkable results. Explore tailored solutions that bring your vision to life.",
     },
+    {
+      property: "og:description",
+      content:
+        "We provide personalized services that integrate our expertise with innovative solutions to deliver remarkable results. Explore tailored solutions that bring your vision to life.",
+    },
+    {
+      property: "og:image",
+      content: "https://rarelogyx.com/images/Cover.png",
+    },
+    {
+      property: "og:url",
+      content: "https://rarelogyx.com/services",
+    },
   ];
 }
 

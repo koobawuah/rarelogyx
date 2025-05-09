@@ -19,6 +19,19 @@ export function meta({}: Route.MetaArgs) {
       content:
         "Explore our portfolio, where ideas become digital realities. From business websites and mobile apps to complex software architectures projects.",
     },
+    {
+      property: "og:description",
+      content:
+        "Explore our portfolio, where ideas become digital realities. From business websites and mobile apps to complex software architectures projects.",
+    },
+    {
+      property: "og:image",
+      content: "https://rarelogyx.com/images/Cover.png",
+    },
+    {
+      property: "og:url",
+      content: "https://rarelogyx.com/projects",
+    },
   ];
 }
 
