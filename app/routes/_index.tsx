@@ -25,7 +25,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Rarelogyx is a software and IT solutions company founded with a mission to empower organizations through technology. Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
+        "Rarelogyx is a software and IT solutions company founded with a mission to empower organizations through technology.",
     },
     {
       property: "og:image",
