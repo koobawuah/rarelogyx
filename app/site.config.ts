@@ -177,7 +177,7 @@ export const siteConfig = {
     },
     {
       label: "X (Twitter)",
-      to: "https://www.x.com/",
+      to: "https://x.com/rarelogyx",
     },
     {
       label: "Instagram",
