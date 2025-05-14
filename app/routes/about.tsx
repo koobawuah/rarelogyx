@@ -21,12 +21,12 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
+        "Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant and purpose-built digital systems.",
     },
     {
       property: "og:description",
       content:
-        "Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant, and purpose-built digital systems.",
+        "Since 2016, we’ve helped startups and enterprises across Africa and beyond bring their ideas to life with reliable, elegant and purpose-built digital systems.",
     },
     {
       property: "og:image",
@@ -59,8 +59,8 @@ export default function About() {
                   <HeadingH1>A corporate technology company.</HeadingH1>
                   <div className="size-auto lg:h-full py-1 flex flex-col justify-between items-stretch lg:items-start col-span-1 row-span-1 gap-6">
                     <p className="max-w-96 lg:max-w-[280px] text-primary text-sm leading-4">
-                      We design, develop, and deploy systems that solve real
-                      problems, drive growth, and deliver measurable value
+                      We design, develop and deploy systems that solve real
+                      problems, drive growth and deliver measurable value
                     </p>
                     <PrimaryButton to="/services" text="Our Services" />
                   </div>

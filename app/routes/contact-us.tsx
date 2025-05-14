@@ -120,7 +120,7 @@ export default function ContactUs() {
                     />
                   }
                   name="Email Us"
-                  description="Share your questions and ideas, and we'll respond quickly."
+                  description="Share your questions and ideas and we'll respond quickly."
                   to={"mailto:contact@rarelogyx.com"}
                   variation="withIcon"
                   bgColor="#122c5f"

@@ -131,7 +131,7 @@ export default function Index() {
                   <p className="text-primary font-normal text-clip text-xl lg:text-2xl leading-[112%] tracking-[-0.48px]">
                     Since 2016, we’ve helped startups and enterprises across
                     Ghana and beyond bring their ideas to life with reliable,
-                    elegant, and purpose-built digital systems.
+                    elegant and purpose-built digital systems.
                   </p>
                 </div>
                 <PrimaryButton to="/about" text="Learn more" />
