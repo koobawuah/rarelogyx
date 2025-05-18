@@ -12,7 +12,7 @@ export function ServiceCard({
   image: string;
 }) {
   return (
-    <div className="w-auto h-120 lg:h-140 px-6 py-12 lg:py-16 bg-transparent rounded-lg border border-aswhite/20 outline-none opacity-1 lg:opacity-100 flex flex-col items-stretch overflow-hidden relative select-none">
+    <div className="w-auto h-120 lg:h-140 px-6 py-12 lg:py-16 bg-transparent rounded-lg border border-aswhite/20 outline-none lg:opacity-100 flex flex-col items-stretch overflow-hidden relative select-none">
       {/* Card Content */}
       <div className="size-auto flex flex-col justify-between items-center gap-6 grow relative z-2 select-none">
         {icon && typeof icon === "string" ? (
