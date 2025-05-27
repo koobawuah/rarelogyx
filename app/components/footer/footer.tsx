@@ -1,3 +1,4 @@
+import { SuiteContext } from "node:test";
 import GridLines from "../grid-lines";
 import FooterMenu from "./footer-menu";
 import { siteConfig } from "~/site.config";
@@ -52,7 +53,7 @@ export default function Footer() {
                 heading="Address"
                 links={[
                   {
-                    to: "https://map.google.com/maps/place/Dr+aggrey+street",
+                    to: siteConfig.core.address,
                     label: (
                       <span>
                         GK1 Asofan Ave,

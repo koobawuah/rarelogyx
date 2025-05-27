@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { cn } from "~/libs/utils";
 import MenuItem from "../menu-item";
+import { siteConfig } from "~/site.config";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ export default function Header() {
           </div>
           <div>
             <MenuItem
-              to="https://map.google.com/maps/place/Dr+aggrey+street"
+              to={siteConfig.core.address}
               text="GK1 Asofan Ave, Ofankor. Accra Ghana."
               base
               className="items-start uppercase"
