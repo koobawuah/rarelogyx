@@ -91,6 +91,7 @@ export default function Projects() {
                   title={p.title}
                   description={p.description}
                   location={p.location}
+                  link={p.previewLink}
                   typeOfWork={p.typeOfWork}
                   completionDate={p.completionDate}
                   tags={p.tags}

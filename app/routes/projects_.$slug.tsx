@@ -86,11 +86,13 @@ export default function ProjectPage() {
                       <p className="max-w-96 lg:max-w-[280px] text-aswhite text-sm leading-4">
                         {pageData?.description}
                       </p>
-                      <PrimaryButton
-                        variant="white"
-                        to={`https://maps.google.com/maps/place/${pageData?.location}`}
-                        text="View On Maps"
-                      />
+                      {pageData?.location && pageData?.previewLink && (
+                        <PrimaryButton
+                          variant="white"
+                          to={pageData?.previewLink}
+                          text="Live Preview"
+                        />
+                      )}
                     </div>
                   </div>
                   <GridLines variant="white" />
@@ -251,6 +253,7 @@ export default function ProjectPage() {
                     title={p.title}
                     description={p.description}
                     location={p.location}
+                    link={p.previewLink}
                     typeOfWork={p.typeOfWork}
                     completionDate={p.completionDate}
                     tags={p.tags}

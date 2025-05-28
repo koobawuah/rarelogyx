@@ -119,6 +119,7 @@ export const siteConfig = {
       previewImage: "/images/projects/bo-brandguildelines.png",
       previewImage2: "/images/projects/BonsuCapital-app-icon.png",
       previewImage3: "/images/projects/BO-app-dash.png",
+      previewLink: "https://bonsucapital.com",
     },
     {
       slug: "servinn-applications-services",
@@ -139,6 +140,7 @@ export const siteConfig = {
       previewImage: "/images/servinn-app.png",
       previewImage2: "/images/projects/servinn-landing.png",
       previewImage3: "/images/projects/servinn-tablet-dash.png",
+      previewLink: "https://servinn-v1.vercel.app",
     },
     {
       slug: "bafla-limited",
@@ -155,6 +157,7 @@ export const siteConfig = {
       previewImage: "/images/projects/buildbafla-landingpage-showcase.png",
       previewImage2: "/images/projects/concreteblocks.jpg",
       previewImage3: "/images/projects/officecomplex.jpg",
+      previewLink: "https://buildbafla.com",
     },
     {
       slug: "amba-gallery",
@@ -171,6 +174,7 @@ export const siteConfig = {
       previewImage: "/images/projects/ambagallery-logos.png",
       previewImage2: "/images/projects/amba.png",
       previewImage3: "/images/projects/amba-official-letterhead.jpg",
+      previewLink: "https://www.behance.net/gallery/223577661/Amba-Gallery",
     },
   ],
   socials: [

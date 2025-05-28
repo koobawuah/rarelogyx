@@ -8,6 +8,7 @@ export default function ProjectItem({
   location,
   typeOfWork,
   completionDate,
+  link,
   tags,
   projectImage,
   reverse = false,
@@ -17,6 +18,7 @@ export default function ProjectItem({
   location: string;
   typeOfWork: string;
   completionDate: Date | string;
+  link: string;
   tags: string[];
   projectImage: string;
   reverse?: boolean;
@@ -81,8 +83,12 @@ export default function ProjectItem({
             text="Learn More"
             to={`/projects/${title.toLowerCase().replaceAll(" ", "-")}`}
           />
-          {location && (
-            <PrimaryButton text="View On Maps" variant="transparent" />
+          {location && link && (
+            <PrimaryButton
+              to={link}
+              text="Live Preview"
+              variant="transparent"
+            />
           )}
         </div>
       </div>
