@@ -14,7 +14,7 @@ import { HighlightItem } from "~/components/highlight-item";
 import { TextBlock } from "~/components/text-block";
 import { FAQItem } from "~/components/faq-item";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ params }: Route.MetaArgs) {
   return [
     { title: "RARELOGYX - About" },
     { property: "og:title", content: "RARELOGYX - About" },
@@ -104,7 +104,7 @@ export default function About() {
             </div>
           </div>
           <div className="size-full absolute inset-0 z-0">
-            <div className="size-full absolute inset-0 z-10 bg-gradient-to-b from-primary/50 to-transparent"></div>
+            <div className="size-full absolute inset-0 z-10 bg-gradient-to-b from-primary/50 to-transparent" />
             <img
               src="/images/rarelogyx-office.jpg"
               alt="Rarelogyx Office space"
@@ -192,30 +192,28 @@ export default function About() {
         </div>
         <div className="w-full flex flex-col items-stretch gap-2 lg:flex-row">
           <div className="size-auto flex flex-col items-stretch gap-2 grow lg:w-1/2">
-            {siteConfig.about.faq &&
-              siteConfig.about.faq
-                .slice(0, 4)
-                .map(({ question, answer, open }, idx) => (
-                  <FAQItem
-                    key={question}
-                    question={question}
-                    answer={answer}
-                    open
-                  />
-                ))}
+            {siteConfig?.about?.faq
+              ?.slice(0, 4)
+              ?.map(({ question, answer, open }, idx) => (
+                <FAQItem
+                  key={question}
+                  question={question}
+                  answer={answer}
+                  open
+                />
+              ))}
           </div>
           <div className="size-auto flex flex-col items-stretch gap-2 grow lg:w-1/2">
-            {siteConfig.about.faq &&
-              siteConfig.about.faq
-                .slice(4, siteConfig.about.faq.length)
-                .map(({ question, answer, open }, idx) => (
-                  <FAQItem
-                    key={question}
-                    question={question}
-                    answer={answer}
-                    open
-                  />
-                ))}
+            {siteConfig?.about?.faq
+              ?.slice(4, siteConfig.about.faq.length)
+              ?.map(({ question, answer, open }, idx) => (
+                <FAQItem
+                  key={question}
+                  question={question}
+                  answer={answer}
+                  open
+                />
+              ))}
           </div>
         </div>
       </SectionBlock>

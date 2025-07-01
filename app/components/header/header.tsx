@@ -18,6 +18,7 @@ export default function Header() {
           />
         </Link>
         <button
+          type="button"
           onClick={() => setIsOpen((prev) => !prev)}
           className="text-xs text-primary font-medium uppercase lg:hidden"
         >
