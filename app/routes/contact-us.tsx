@@ -225,16 +225,6 @@ export default function ContactUs() {
                     preventScrollReset
                     className="size-auto flex flex-col justify-start items-stretch gap-8"
                   >
-                    <script
-                      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-                      async
-                      defer
-                    />
-                    <div
-                      className="cf-turnstile"
-                      data-sitekey="0x4AAAAAABkhzEC1mv9i9DQl"
-                    />
-
                     <div className="size-auto flex flex-col justify-start items-stretch gap-6">
                       <FormInput
                         name="fullname"
@@ -296,6 +286,15 @@ export default function ContactUs() {
                         ? "Sending..."
                         : "Send A Message"}
                     </button>
+                    <script
+                      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                      async
+                      defer
+                    />
+                    <div
+                      className="cf-turnstile"
+                      data-sitekey="0x4AAAAAABkhzEC1mv9i9DQl"
+                    />
                   </Form>
                 )}
 
