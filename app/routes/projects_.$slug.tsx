@@ -19,7 +19,7 @@ export function meta({ location, params }: Route.MetaArgs) {
   // console.log("Mate: ", `${capitalize(check as string)} - RARELOGYX ROJECT`);
 
   return [
-    { title: `${project?.title} - RARELOGYX ROJECT` },
+    { title: `${project?.title} - RARELOGYX PROJECT` },
     {
       name: "description",
       content: `${project?.description}`,
@@ -98,10 +98,10 @@ export default function ProjectPage() {
                   <GridLines variant="white" />
                 </div>
                 <div className="size-full block absolute inset-0 z-1 shrink">
-                  <div className="size-full block absolute inset-0 z-2 bg-gradient-to-t from-primary/65 to-60% to-primary/0"></div>
+                  <div className="size-full block absolute inset-0 z-2 bg-gradient-to-t from-primary/65 to-60% to-primary/0" />
                   <img
                     src={pageData?.projectImage}
-                    alt={`Rarelogyx Project - ${pageData?.title} page preview image`}
+                    alt={`Rarelogyx Project - ${pageData?.title} page preview images`}
                     className="size-full max-w-full inline-block object-cover overflow-clip absolute inset-0 z-1"
                   />
                 </div>
@@ -162,7 +162,7 @@ export default function ProjectPage() {
         <div className="size-auto block overflow-hidden object-fill grow relative rounded-lg">
           <img
             src={pageData?.previewImage}
-            alt={`Rarelogyx ${pageData?.title} Project Preview Image`}
+            alt={`Rarelogyx ${pageData?.title} Project Preview Images`}
             className="size-full max-w-full inline-block overflow-clip object-cover absolute inset-0"
           />
         </div>
@@ -190,17 +190,21 @@ export default function ProjectPage() {
               </p>
             </div>
             <div className="size-auto max-w-80 flex flex-wrap justify-start items-start gap-1.5">
-              {pageData?.tags &&
-                pageData?.tags.map((t, idx) => (
-                  <span key={`${t} - ${idx}`} className="size-auto block">
-                    <PrimaryChips
-                      variant="white"
-                      animate={false}
-                      className="bg-aswhite/3"
-                      text={t}
-                    />
-                  </span>
-                ))}
+              {pageData?.tags
+                ? pageData?.tags.map((t, idx) => (
+                    <span
+                      key={`${t} - ${idx.toString()}`}
+                      className="size-auto block"
+                    >
+                      <PrimaryChips
+                        variant="white"
+                        animate={false}
+                        className="bg-aswhite/3"
+                        text={t}
+                      />
+                    </span>
+                  ))
+                : null}
             </div>
           </div>
         </div>
@@ -212,7 +216,7 @@ export default function ProjectPage() {
           <div className="w-auto h-140 lg:h-screen min-h-auto lg:min-h-180 block shrink overflow-hidden rounded-lg relative">
             <img
               src={pageData?.previewImage2}
-              alt={`Rarelogyx ${pageData?.title} Project Preview Image 2`}
+              alt={`Rarelogyx ${pageData?.title} Project Preview Images 2`}
               className="size-full max-w-full inline-block overflow-clip object-cover absolute inset-0 z-auto"
             />
           </div>
@@ -221,7 +225,7 @@ export default function ProjectPage() {
           <div className="w-auto h-120 lg:h-[150vh] min-h-auto lg:min-h-300 block shrink overflow-hidden rounded-lg relative">
             <img
               src={pageData?.previewImage3}
-              alt={`Rarelogyx ${pageData?.title} Project Preview Image 2`}
+              alt={`Rarelogyx ${pageData?.title} Project Preview Images 2`}
               className="size-full max-w-full inline-block overflow-clip object-cover absolute inset-0 z-auto"
             />
           </div>

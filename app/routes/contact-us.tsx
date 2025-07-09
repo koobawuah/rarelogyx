@@ -15,7 +15,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ params }: Route.MetaArgs) {
   return [
     { title: "RARELOGYX - Contact Us" },
     { property: "og:title", content: "RARELOGYX - Contact Us" },
@@ -47,6 +47,32 @@ export async function action({ request }: Route.ActionArgs) {
   const phone = String(formData.get("phone"));
   const inquiry = String(formData.get("inquiryType"));
   const message = String(formData.get("message"));
+  const honeypot = String(formData.get("company"));
+
+  if (honeypot) {
+    console.warn("Bot detected");
+    return { error: "Bot detected" };
+  }
+
+  const response = formData.get("cf-turnstile-response");
+  console.log("Turnstile form: ", response);
+  const result = await fetch(
+    "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+    {
+      method: "POST",
+      body: new URLSearchParams({
+        secret: process.env.CLOUDFLARE_TURNSTILE || "",
+        response: response as string,
+        remoteip: request.headers.get("cf-connecting-ip") || "",
+      }),
+    }
+  );
+  const data = await result.json();
+  console.log("Turnstile data: ", data);
+  if (!data.success) {
+    console.warn("Bot detected: Turnstile");
+    return { error: "Bot detected" };
+  }
 
   //Send email with resend
   try {
@@ -183,6 +209,7 @@ export default function ContactUs() {
                     <img
                       src="https://cdn.prod.website-files.com/67f8396791b9193c487e231d/67f8396891b9193c487e23af_Check.svg"
                       className="size-6 max-w-full overflow-clip"
+                      alt="check icon"
                     />
                     <p className="text-left text-sm font-medium text-primary leading-4 uppercase">
                       Your Message Has Been Sent
@@ -198,11 +225,27 @@ export default function ContactUs() {
                     preventScrollReset
                     className="size-auto flex flex-col justify-start items-stretch gap-8"
                   >
+                    <script
+                      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                      async
+                      defer
+                    />
+                    <div
+                      className="cf-turnstile"
+                      data-sitekey="0x4AAAAAABkhzEC1mv9i9DQl"
+                    />
+
                     <div className="size-auto flex flex-col justify-start items-stretch gap-6">
                       <FormInput
                         name="fullname"
                         label="Full Name"
                         placeholder="Kwame O. Nkrumah"
+                      />
+                      <input
+                        name="company"
+                        type="text"
+                        autoComplete="off"
+                        className="hidden"
                       />
                       <div className="size-auto flex flex-col lg:flex-row justify-start items-stretch gap-6 lg:gap-2">
                         <FormInput

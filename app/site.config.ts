@@ -188,7 +188,7 @@ export const siteConfig = {
     },
     {
       label: "Instagram",
-      to: "https://www.instagram.com/",
+      to: "https://www.instagram.com/rarelogyx",
     },
   ],
 };

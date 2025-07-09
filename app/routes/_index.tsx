@@ -13,7 +13,7 @@ import SectionBlock from "~/components/section-block";
 import { siteConfig } from "~/site.config";
 import type { Route } from "../+types/root";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ params }: Route.MetaArgs) {
   return [
     {
       title: "RARELOGYX - Digital Solutions, Engineered for Growth.",
@@ -124,6 +124,7 @@ export default function Index() {
               <img
                 src="images/about-overview.jpeg"
                 className="w-auto max-w-full h-[360px] lg:size-auto border border-white/20 rounded-lg overflow-clip object-cover grow box-border"
+                alt="Man in Office"
               />
               <div className="bg-[#f2f2f2] py-7 px-6 flex flex-col justify-start items-start gap-12 shrink rounded-lg">
                 <div className="w-full max-w-150 flex flex-col justify-start items-start gap-4">
