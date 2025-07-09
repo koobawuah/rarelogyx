@@ -10,7 +10,12 @@ import HeadingH2 from "~/components/heading-h2";
 import PrimaryChips from "~/components/primary-chips";
 import { cn } from "~/libs/utils";
 import type { Route } from "../+types/root";
-import { Form, useActionData, useNavigation } from "react-router";
+import {
+  Form,
+  useActionData,
+  useNavigation,
+  type HeadersFunction,
+} from "react-router";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -40,6 +45,15 @@ export function meta({ params }: Route.MetaArgs) {
   ];
 }
 
+export const headers: HeadersFunction = () => ({
+  "Content-Security-Policy": [
+    "default-src 'self';",
+    "script-src 'self' https://challenges.cloudflare.com;",
+    "frame-src https://challenges.cloudflare.com;",
+    "style-src 'self' 'unsafe-inline';",
+  ].join(" "),
+});
+
 export async function action({ request }: Route.ActionArgs) {
   const formData = await request.formData();
   const fullname = String(formData.get("fullname"));
@@ -55,23 +69,28 @@ export async function action({ request }: Route.ActionArgs) {
   }
 
   const response = formData.get("cf-turnstile-response");
-  console.log("Turnstile form: ", response);
+
+  if (!response || typeof response !== "string") {
+    console.error("Missing Turnstile token");
+    return;
+  }
   const result = await fetch(
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
     {
       method: "POST",
       body: new URLSearchParams({
-        secret: process.env.CLOUDFLARE_TURNSTILE || "",
+        secret:
+          process.env.CLOUDFLARE_TURNSTILE ||
+          "1x0000000000000000000000000000000AA",
         response: response as string,
         remoteip: request.headers.get("cf-connecting-ip") || "",
       }),
     }
   );
   const data = await result.json();
-  console.log("Turnstile data: ", data);
   if (!data.success) {
-    console.warn("Bot detected: Turnstile");
-    return { error: "Bot detected" };
+    console.warn("Bot detected: Turnstile flagged");
+    return { error: "Bot detected: Turnstile flagged" };
   }
 
   //Send email with resend
@@ -220,6 +239,7 @@ export default function ContactUs() {
                   </div>
                 ) : (
                   <Form
+                    id="contact-form"
                     method="post"
                     reloadDocument={false}
                     preventScrollReset
@@ -241,6 +261,7 @@ export default function ContactUs() {
                         <FormInput
                           name="email"
                           label="Email"
+                          type="email"
                           placeholder="nkwame.o@gmail.com"
                           required
                         />
@@ -286,17 +307,49 @@ export default function ContactUs() {
                         ? "Sending..."
                         : "Send A Message"}
                     </button>
-                    <script
-                      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-                      async
-                      defer
-                    />
+
+                    {/* 👇 Turnstile widget */}
                     <div
+                      id="turnstile-container"
                       className="cf-turnstile"
+                      // data-sitekey="1x00000000000000000000AA" // ✅ Cloudflare test site key
                       data-sitekey="0x4AAAAAABkhzEC1mv9i9DQl"
+                      data-callback="onTurnstileSuccess" // ✅ Calls JS function on success
+                      data-size="invisible"
                     />
                   </Form>
                 )}
+                <script
+                  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                  async
+                  defer
+                />
+                {/* 👇 Run Turnstile before form submission */}
+                <script
+                  // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                    const form = document.getElementById("contact-form");
+                    const turnstileContainer = document.getElementById("turnstile-container");
+
+                    // Prevent default form submission
+                    form.addEventListener("submit", function (e) {
+                      const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+                      if (!tokenInput?.value) {
+                        e.preventDefault();
+                        // Run Turnstile (this triggers data-callback)
+                        turnstile.execute(turnstileContainer);
+                      }
+                    });
+
+                    // Called when Turnstile validates
+                    function onTurnstileSuccess(token) {
+                      form.submit();
+                    }
+                    window.onTurnstileSuccess = onTurnstileSuccess;
+                  `,
+                  }}
+                />
 
                 {/* error */}
                 {response?.error && (
