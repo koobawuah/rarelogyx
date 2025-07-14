@@ -1,3 +1,9 @@
+import type { Route } from "../+types/root";
+
+export function meta({ params }: Route.MetaArgs) {
+  return [{ title: "RARELOGYX Partner Program" }];
+}
+
 export default function Partner() {
   return (
     <div className="h-[100vh] p-2.5">

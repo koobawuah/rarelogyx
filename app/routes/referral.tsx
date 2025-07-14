@@ -1,3 +1,9 @@
+import type { Route } from "../+types/root";
+
+export function meta({ params }: Route.MetaArgs) {
+  return [{ title: "RARELOGYX Referral Program" }];
+}
+
 export default function Referral() {
   return (
     <div className="h-[100vh] p-2.5">
