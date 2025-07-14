@@ -27,12 +27,18 @@ export default function Footer() {
               </div>
               <div className="size-auto flex flex-col justify-start items-start gap-1.5">
                 <a
-                  href="#"
-                  className="text-primary/70 text-xs font-medium leading-4 uppercase"
+                  href="/partner"
+                  className="text-primary/70 text-xs font-medium leading-4 uppercase hover:underline underline-offset-2"
                 >
-                  Licenses
+                  Partner
                 </a>
-                <p className=" text-primary/70 text-xs font-medium leading-4 uppercase">
+                <a
+                  href="/referral"
+                  className="text-primary/70 text-xs font-medium leading-4 uppercase hover:underline underline-offset-2"
+                >
+                  Referral
+                </a>
+                <p className=" text-primary/70 text-xs font-medium leading-4 uppercase mt-2.5">
                   &copy; {new Date().getFullYear()}, RARELOGYX
                 </p>
               </div>

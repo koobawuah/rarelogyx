@@ -1,6 +1,8 @@
 export const siteConfig = {
   core: {
     address: "https://maps.app.goo.gl/4tsHvfuWxRBfArrK6",
+    adLink: "/rcp",
+    adLabel: "Earn GHS500 to GHS6,000 with RCP",
   },
   about: {
     faq: [

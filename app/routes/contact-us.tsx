@@ -17,6 +17,7 @@ import {
   type HeadersFunction,
 } from "react-router";
 import { Resend } from "resend";
+import { siteConfig } from "~/site.config";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -195,7 +196,7 @@ export default function ContactUs() {
                 }
                 name="Visit Us"
                 description="Visit us for personalized consultations and advice."
-                to={"https://www.google.com/maps/place/dr+aggrey+street"}
+                to={siteConfig.core.address || ""}
                 variation="withIcon"
                 bgColor="rgba(242,242, 242,0.5)"
               />
