@@ -1,25 +1,34 @@
 import HeadingH3 from "./heading-h3";
+import type { ClassValue } from "clsx";
+import { cn } from "~/libs/utils";
 
 export function ServiceCard({
   icon,
   heading,
   description,
   image,
+  className,
 }: {
   icon: React.ReactNode | string;
   heading: string;
   description: string;
   image: string;
+  className?: ClassValue;
 }) {
   return (
-    <div className="w-auto h-120 lg:h-140 px-6 py-12 lg:py-16 bg-transparent rounded-lg border border-aswhite/20 outline-none lg:opacity-100 flex flex-col items-stretch overflow-hidden relative select-none">
+    <div
+      className={cn(
+        "w-auto h-120 lg:h-140 px-6 py-12 lg:py-16 bg-transparent rounded-lg border border-aswhite/20 outline-none lg:opacity-100 flex flex-col grow items-stretch overflow-hidden relative select-none",
+        className,
+      )}
+    >
       {/* Card Content */}
       <div className="size-auto flex flex-col justify-between items-center gap-6 grow relative z-2 select-none">
         {icon && typeof icon === "string" ? (
           <img
             src={icon}
             alt={`${heading} icon`}
-            className="size-7 lg:size-8 max-w-full inline-block shrink overflow-clip bg-no-repeat"
+            className="size-7 text-white lg:size-8 max-w-full inline-block shrink overflow-clip bg-no-repeat"
           />
         ) : (
           icon
@@ -34,10 +43,10 @@ export function ServiceCard({
 
       {/* Card Background */}
       <div className="size-full block absolute inset-0 z-1 shrink">
-        <div className="size-full block absolute inset-0 z-2 bg-gradient-to-t from-bg-primary/50 to-bg-primary/0%"></div>
+        <div className="size-full block absolute inset-0 z-2 bg-gradient-to-t from-bg-primary/50 to-bg-primary/0%" />
         <img
           src={image}
-          alt={`${heading} ${image} image`}
+          alt={`${heading} ${image} img`}
           className="size-full max-w-full inline-block object-cover overflow-clip absolute inset-0 z-1 blur-lg"
         />
       </div>

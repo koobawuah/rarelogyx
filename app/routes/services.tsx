@@ -132,7 +132,8 @@ export default function Services() {
               <div className="w-full max-w-100 lg:max-w-170 h-auto flex flex-col items-center gap-4 shrink">
                 <PrimaryChips text="Expert Solutions" />
                 <HeadingH2 className="text-primary my-0">
-                  Rarelogyx delivers IT solutions and app development in Ghana.
+                  Rarelogyx delivers IT and Software development solutions in
+                  Ghana.
                 </HeadingH2>
               </div>
             </div>
@@ -145,8 +146,9 @@ export default function Services() {
                       heading={heading}
                       description={description}
                       image={image}
+                      className="[&:last-child:nth-child(3n+2)]:lg:col-span-full [&:last-child:nth-child(3n)]:lg:col-span-2"
                     />
-                  )
+                  ),
                 )
               : null}
           </div>

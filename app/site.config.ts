@@ -73,10 +73,10 @@ export const siteConfig = {
     },
     {
       icon: "/images/icons/leaf.svg",
-      heading: "Brand Identity Design",
+      heading: "Business Process Automation",
       description:
-        "We see longevity in your visions, lets design a unique identity for the world to see it too.",
-      image: "/images/ttetl-brochure-front.webp",
+        "Switch from manual, repetitive tasks to reduce errors and drive scalable profitability",
+      image: "/images/tech-group.jpg",
     },
     {
       icon: "/images/icons/idea.svg",
@@ -98,6 +98,13 @@ export const siteConfig = {
       description:
         "We help early-stage startups validate ideas with speed. With a testable version of your product.",
       image: "/images/rarelogyx.logomark.png",
+    },
+    {
+      icon: "/images/icons/headset-support.svg",
+      heading: "Tech Support",
+      description:
+        "We provide troubleshooting, system upgrades and technological advancements training services.",
+      image: "/images/lady-on-phone.jpg",
     },
   ],
   projects: [
